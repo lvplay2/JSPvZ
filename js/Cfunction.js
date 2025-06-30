@@ -2195,7 +2195,7 @@ var $User = (function () {
             );
         $("IF2").src = b[c.DataInx][1] + "asp/ChatSend.asp" + { 0: "", 1: "?C=5000", 255: "?C=0" }[$User.Visitor.UserAuthority];
         $("ChatView").src = b[c.DataInx][1] + "asp/ViewChat.asp";
-        e.innerHTML = Number(c.SpeedInx) + 1 + "号服<br>" + (Number(c.DataInx) + 1) + "号服";
+        e.innerHTML = "Server #" + (Number(c.SpeedInx) + 1) + "<br>" + "Server #" + (Number(c.DataInx) + 1);
         LoadLvl();
     },
     LoadLvl = function (e, c) {
@@ -2254,7 +2254,7 @@ var $User = (function () {
         AllAudioPauseCanceled();
         var a = oSym;
         a.Start();
-        innerText(b, "暂停游戏");
+        innerText(b, "Pause");
         $("dMenu1").onclick = ClickMenu;
         SetNone($("dSurface"), $("dPause"));
         $("dPauseAD").innerHTML = "";
@@ -2263,7 +2263,7 @@ var $User = (function () {
         var b = oSym;
         AllAudioPaused();
         b.Stop();
-        innerText(c, "回到游戏");
+        innerText(c, "Unpause");
         $("dMenu1").onclick = null;
         !a && SetBlock($("dSurface"), $("dPause"));
         $("dPauseAD").innerHTML =
@@ -2272,7 +2272,7 @@ var $User = (function () {
                 : '<img src="images/Zombies/NewspaperZombie/1.gif">';
     },
     ClickMenu = function () {
-        oSym.Timer && (AllAudioPaused(), PlayAudio("pause"), oSym.Stop(), SetBlock($("dSurface")), innerText($("dMenu0"), "回到游戏"), ShowOptions());
+        oSym.Timer && (AllAudioPaused(), PlayAudio("pause"), oSym.Stop(), SetBlock($("dSurface")), innerText($("dMenu0"), "Unpause"), ShowOptions());
     },
     OptionsMenuDown = function (b, a) {
         b.className = "OptionsMenuButtonDown";
@@ -2327,17 +2327,17 @@ var $User = (function () {
         PlayAudio("gravebutton");
         SetNone($("dRiddleInx"));
         SetBlock($("dRiddle0"));
-        $("dRiddleTitle").innerHTML = "益智模式单机版";
+        $("dRiddleTitle").innerHTML = "Puzzle Mode";
     },
     ShowRiddle1 = function () {
-        $User.isAuthorWebsite ? (PlayAudio("gravebutton"), SetNone($("dRiddleInx")), SetBlock($("dRiddle1")), ($("dRiddleTitle").innerHTML = "益智模式对战版")) : GotoAuthorWebsite("益智模式对战的功能");
+        $User.isAuthorWebsite ? (PlayAudio("gravebutton"), SetNone($("dRiddleInx")), SetBlock($("dRiddle1")), ($("dRiddleTitle").innerHTML = "Puzzle Mode Versus Version")) : GotoAuthorWebsite("Puzzle mode versus feature");
     },
     ReturnRiddleInx = function () {
         PlayAudio("tap");
         SetBlock($("dRiddleInx"));
         SetNone($("dRiddle0"), $("dRiddle1"));
         $("dRiddleSmallContainer").className = "TitleSmallContainer  Almanac_IndexBack";
-        $("dRiddleTitle").innerHTML = "益智模式";
+        $("dRiddleTitle").innerHTML = "Puzzle Mode";
     },
     ShowOptions = function () {
         PlayAudio(oS.Lvl ? "gravebutton" : "tap");
@@ -2351,7 +2351,7 @@ var $User = (function () {
     },
     ViewHandBook = function () {
         SetNone($("dOptionsMenuback"), $("dOptionsMenu"));
-        oS.Lvl ? (AllAudioPaused(), PlayAudio("gravebutton"), SetNone($("dSurface")), oSym.Stop(), innerText($("dMenu0"), "回到游戏"), ($("dMenu1").onclick = null)) : (AllAudioPaused(), PlayAudio("tap"));
+        oS.Lvl ? (AllAudioPaused(), PlayAudio("gravebutton"), SetNone($("dSurface")), oSym.Stop(), innerText($("dMenu0"), "Unpause"), ($("dMenu1").onclick = null)) : (AllAudioPaused(), PlayAudio("tap"));
         PlayAudio("Look up at the Sky");
         SetVisible($("dHandBook"));
     },
@@ -2590,7 +2590,7 @@ var $User = (function () {
         })();
     }),
     (ViewChat = function (a) {
-        a.value == "显示聊天" ? (SetBlock($("IF2"), $("dChatView")), (a.value = "关闭聊天")) : (SetNone($("IF2"), $("dChatView")), (a.value = "显示聊天"));
+        a.value == "Show Chat" ? (SetBlock($("IF2"), $("dChatView")), (a.value = "Hide Chat")) : (SetNone($("IF2"), $("dChatView")), (a.value = "Show Chat"));
     });
 (Date.prototype.format = function (b) {
     var c = { "M+": this.getMonth() + 1, "d+": this.getDate(), "h+": this.getHours(), "m+": this.getMinutes(), "s+": this.getSeconds(), "q+": Math.floor((this.getMonth() + 3) / 3), S: this.getMilliseconds() };
