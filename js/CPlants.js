@@ -1282,7 +1282,7 @@ var CPlants = NewO({
     }),
     oHugeNutBowling = InheritO(oNutBowling, {
         EName: "oHugeNutBowling",
-        CName: "巨型坚果保龄球",
+        CName: "Giant Wall-nut Bowling",
         width: 142,
         height: 142,
         beAttackedPointL: 5,
@@ -1315,7 +1315,7 @@ var CPlants = NewO({
     }),
     oBoomNutBowling = InheritO(oNutBowling, {
         EName: "oBoomNutBowling",
-        CName: "爆炸坚果",
+        CName: "Explode-o-nut",
         PicArr: ["images/Card/Plants/BoomWallNut.png", "images/Plants/WallNut/1.gif", "images/Plants/WallNut/BoomWallNutRoll.gif", "images/Plants/CherryBomb/Boom.gif"],
         AudioArr: ["cherrybomb", "bowling"],
         PrivateBirth: function (a) {
@@ -1357,16 +1357,16 @@ var CPlants = NewO({
     }),
     oTallNut = InheritO(oWallNut, {
         EName: "oTallNut",
-        CName: "高坚果",
+        CName: "Tall-nut",
         width: 83,
         height: 119,
         beAttackedPointR: 63,
         SunNum: 125,
         HP: 8000,
         PicArr: ["images/Card/Plants/TallNut.png", "images/Plants/TallNut/0.gif", "images/Plants/TallNut/TallNut.gif", "images/Plants/TallNut/TallnutCracked1.gif", "images/Plants/TallNut/TallnutCracked2.gif"],
-        Tooltip: "不会被跳过的坚实壁垒",
+        Tooltip: "Heavy-duty wall that can't be vaulted over",
         Produce:
-            '高坚果是重型壁垒植物，而且不会被跨过。<p>韧性：<font color="#FF0000">非常高</font><br>特殊：<font color="#FF0000">不会被跨过或越过</font></p>人们想知道，坚果墙和高坚果是否在竞争。高坚果以男中音的声调大声笑了。“我们之间怎么会存在竞争关系？我们是哥们儿。你知道坚果墙为我做了什么吗……”高坚果的声音越来越小，他狡黠地笑着。”',
+            'Tall-nuts are heavy-duty wall plants that can\'t be vaulted over.<p>Toughness： <font color="#FF0000">very high</font><br>Special： <font color="#FF0000">can\'t be vaulted or jumped over</font></p>People wonder if there\'s a rivalry between Wall-nut and Tall-nut. Tall-nut laughs a rich, baritone laugh. "How could there be anything between us? We are brothers. If you knew what Wall-nut has done for me..."',
         CanGrow: function (c, b, f) {
             var a = b + "_" + f,
                 d = c[1],
@@ -1396,7 +1396,7 @@ var CPlants = NewO({
     }),
     oCherryBomb = InheritO(CPlants, {
         EName: "oCherryBomb",
-        CName: "樱桃炸弹",
+        CName: "Cherry Bomb",
         width: 112,
         height: 81,
         beAttackedPointR: 92,
@@ -1404,9 +1404,9 @@ var CPlants = NewO({
         coolTime: 50,
         PicArr: ["images/Card/Plants/CherryBomb.png", "images/Plants/CherryBomb/0.gif", "images/Plants/CherryBomb/CherryBomb.gif", "images/Plants/CherryBomb/Boom.gif" + $Random],
         AudioArr: ["cherrybomb"],
-        Tooltip: "炸掉一定区域内的所有僵尸",
+        Tooltip: "Blows up all zombies in an area",
         Produce:
-            '樱桃炸弹，能炸掉一定区域内所有僵尸。他们一种下就会立刻引爆。所以请把他们种在僵尸们的身边。<p>伤害：<font color="#FF0000">巨大</font><br>范围：<font color="#FF0000">一个中等区域内的所有僵尸</font><br>使用方法：<font color="#FF0000">单独使用，立即爆炸</font></p>“我要‘爆’开了。”樱桃一号说。“不，我们是要‘炸’开了！”它哥哥樱桃二号说。经过激烈的商议之后，他们才统一“爆炸这个说法。”',
+            'Cherry Bombs can blow up all zombies in an area. They have a short fuse so plant them near zombies.<p>Damage： <font color="#FF0000">massive</font><br>Range： <font color="#FF0000">all zombies in a medium area</font><br>Usage： <font color="#FF0000">single use, instant</font></p>"I wanna explode," says Cherry #1. "No, let\'s detonate instead!" says his brother, Cherry #2. After intense consultation they agree to explodonate.',
         InitTrigger: function () {},
         getHurt: function () {},
         PrivateBirth: function (a) {
@@ -1441,15 +1441,15 @@ var CPlants = NewO({
     }),
     oJalapeno = InheritO(oCherryBomb, {
         EName: "oJalapeno",
-        CName: "火爆辣椒",
+        CName: "Jalapeno",
         width: 68,
         height: 89,
         beAttackedPointR: 48,
         PicArr: ["images/Card/Plants/Jalapeno.png", "images/Plants/Jalapeno/0.gif", "images/Plants/Jalapeno/Jalapeno.gif", "images/Plants/Jalapeno/JalapenoAttack.gif"],
         AudioArr: ["jalapeno"],
-        Tooltip: "消灭整行的敌人",
+        Tooltip: "Destroys an entire lane of zombies",
         Produce:
-            '火爆辣椒可以摧毁一整条线上的敌人。<p>伤害：<font color="#FF0000">极高</font><br>范围：<font color="#FF0000">整条线上的僵尸</font><br>用法：<font color="#FF0000">单独使用，立即生效</font></p>“嘎嘎嘎嘎嘎嘎嘎！！！”火爆辣椒说。他现在不会爆炸，还不到时候，不过快了，喔~，快了快了，快来了。他知道，他感受到了，他一生都是在等待这个时刻！',
+            'Jalapenos destroy an entire lane of zombies.<p>Damage： <font color="#FF0000">massive</font><br>Range： <font color="#FF0000">all zombies in a lane</font><br>Usage：<font color="#FF0000">single use, instant</font></p>"NNNNNGGGGGG!!!!!!!!" Jalapeno says. He\'s not going to explode, not this time. But soon. Oh, so soon. It\'s close. He knows it, he can feel it, his whole life\'s been leading up to this moment.',
         PrivateBirth: function (a) {
             oSym.addTask(
                 72,
@@ -1483,7 +1483,7 @@ var CPlants = NewO({
     }),
     oSpikeweed = InheritO(CPlants, {
         EName: "oSpikeweed",
-        CName: "地刺",
+        CName: "Spikeweed",
         width: 85,
         height: 35,
         beAttackedPointL: 10,
@@ -1494,9 +1494,9 @@ var CPlants = NewO({
         PicArr: ["images/Card/Plants/Spikeweed.png", "images/Plants/Spikeweed/0.gif", "images/Plants/Spikeweed/Spikeweed.gif"],
         Attack: 20,
         ArZ: {},
-        Tooltip: "扎破轮胎, 也能伤害走在上面的僵尸",
+        Tooltip: "Pops tires and hurts zombies that step on it",
         Produce:
-            '地刺可以扎破轮胎，并对踩到他的僵尸造成伤害<p>伤害：<font color="#FF0000">普通</font><br>范围：<font color="#FF0000">所有踩到他的僵尸</font><br>特点：<font color="#FF0000">不会被僵尸吃掉</font></p>地刺痴迷冰球，他买了包厢的季票。他一直关注着他喜欢的球员，他也始终如一的在赛后清理冰球场。但只有一个问题：他害怕冰球。',
+            'Spikeweeds pop tires and hurt any zombies that step on them.<p>Damage： <font color="#FF0000">normal</font><br>Range： <font color="#FF0000">all zombies that walk over it</font><br>Special：<font color="#FF0000">can\'t be eaten by zombies</font></p>Hockey is Spikeweed\'s obsession. He\'s got box seat season tickets. He keeps close track of his favorite players. And he consistently cleans up in the office hockey pool. Just one problem: he\'s terrified of pucks.',
         CanGrow: function (c, b, e) {
             var a = b + "_" + e,
                 d = oS.ArP;
@@ -1555,7 +1555,7 @@ var CPlants = NewO({
     }),
     oSpikerock = InheritO(oSpikeweed, {
         EName: "oSpikerock",
-        CName: "地刺王",
+        CName: "Spikerock",
         width: 84,
         height: 43,
         beAttackedPointL: 10,
@@ -1564,9 +1564,9 @@ var CPlants = NewO({
         coolTime: 50,
         PicArr: ["images/Card/Plants/Spikerock.png", "images/Plants/Spikerock/0.gif", "images/Plants/Spikerock/Spikerock.gif", "images/Plants/Spikerock/2.gif", "images/Plants/Spikerock/3.gif"],
         Attack: 40,
-        Tooltip: "能扎破多个轮胎, 并伤害经过上面的僵尸<br>(需要地刺)",
+        Tooltip: "Pops multiple tires and damages zombies that walk over it<br>(requires spikeweed)",
         Produce:
-            '地刺王可以扎破多个轮胎，并对踩到他的僵尸造成伤害。<p><font color="#FF0000">必须种植在地刺上</font></p>地刺王刚刚从欧洲旅行回来。他玩的很高兴，也认识了很多有趣的人。这些都真的拓展了他的视野——他从来不知道，他们建造了这么大的博物馆，有这么多的画作。这对他来说太惊奇了。',
+            'Spikerocks pop multiple tires and damage zombies that walk over it.<p><font color="#FF0000">Must be planted on spikeweeds</font></p>Spikerock just got back from a trip to Europe. He had a great time, met some wonderful people, really broadened his horizons. He never knew they made museums so big, or put so many paintings in them. That was a big surprise for him.',
         CanGrow: function (b, a, d) {
             var c = b[1];
             return c && c.EName == "oSpikeweed";
@@ -1599,16 +1599,16 @@ var CPlants = NewO({
     }),
     oGarlic = InheritO(CPlants, {
         EName: "oGarlic",
-        CName: "大蒜",
+        CName: "Garlic",
         width: 60,
         height: 59,
         beAttackedPointR: 40,
         SunNum: 50,
         HP: 400,
         PicArr: ["images/Card/Plants/Garlic.png", "images/Plants/Garlic/0.gif", "images/Plants/Garlic/Garlic.gif", "images/Plants/Garlic/Garlic_body2.gif", "images/Plants/Garlic/Garlic_body3.gif"],
-        Tooltip: "将僵尸赶到其它的横行",
+        Tooltip: "Diverts zombies into other lanes",
         Produce:
-            '大蒜可以让僵尸改变前进的路线。<p>范围：<font color="#FF0000">近距离接触</font><br>特点：<font color="#FF0000">改变僵尸的前进路线</font></p>路线转向，这不仅仅是大蒜的专业，更是他的热情所在。他在布鲁塞尔大学里，获得了转向学的博士学位。他能把路线向量和反击阵列，讲上一整天。他甚至会把家里的东西，推到街上去。不知道为啥，他老婆还可以忍受这些。',
+            'Garlic diverts zombies into other lanes.<p>Usage： <font color="#FF0000">on contact</font><br>Special： <font color="#FF0000">diverts zombies into other lanes</font></p>He carries an advanced Doctorate in Redirection from the Brussels University. He\'ll talk all day about lane vectors and repulse arrays. He even pushes things into alternate avenues at home. Somehow his wife puts up with it.',
         CanGrow: function (c, b, f) {
             var a = b + "_" + f,
                 d = c[1],
@@ -1638,7 +1638,7 @@ var CPlants = NewO({
     }),
     oSquash = InheritO(CPlants, {
         EName: "oSquash",
-        CName: "窝瓜",
+        CName: "Squash",
         width: 100,
         height: 226,
         beAttackedPointR: 67,
@@ -1646,9 +1646,9 @@ var CPlants = NewO({
         coolTime: 30,
         PicArr: ["images/Card/Plants/Squash.png", "images/Plants/Squash/0.gif", "images/Plants/Squash/Squash.gif", "images/Plants/Squash/SquashAttack.gif", "images/Plants/Squash/SquashL.png", "images/Plants/Squash/SquashR.png"],
         AudioArr: ["squash_hmm", "gargantuar_thump"],
-        Tooltip: "压扁接近的僵尸",
+        Tooltip: "Squashes zombies",
         Produce:
-            '窝瓜会压扁第一个接近它的僵尸。<p>伤害：<font color="#FF0000">极高</font><br>范围：<font color="#FF0000">短，覆盖所有它压到的僵尸。</font><br>用法：<font color="#FF0000">单独使用</font></p>“我准备好了！”窝瓜大吼道，“干吧！！算我一份！没人比我厉害！我就是你要的人！来啊！等啥啊？要的就是这个！”',
+            'Squashes will smash the first zombie that gets close to it.<p>Damage： <font color="#FF0000">massive</font><br>Range： <font color="#FF0000">short range, hits all zombies that it lands on</font><br>Usage： <font color="#FF0000">single use</font></p>"I\'m ready!" yells Squash. "Let\'s do it! Put me in! There\'s nobody better! I\'m your guy! C\'mon! Whaddya waiting for? I need this!"',
         GetDY: function (b, c, a) {
             return a[0] ? -21 : -10;
         },
@@ -1705,15 +1705,15 @@ var CPlants = NewO({
     }),
     oChomper = InheritO(CPlants, {
         EName: "oChomper",
-        CName: "大嘴花",
+        CName: "Chomper",
         width: 130,
         height: 114,
         beAttackedPointR: 70,
         SunNum: 150,
         PicArr: ["images/Card/Plants/Chomper.png", "images/Plants/Chomper/0.gif", "images/Plants/Chomper/Chomper.gif", "images/Plants/Chomper/ChomperAttack.gif", "images/Plants/Chomper/ChomperDigest.gif"],
-        Tooltip: "能一口气吞下一只僵尸, 但处于咀嚼状态中十分脆弱",
+        Tooltip: "Devours a zombie whole, but is vulnerable while chewing",
         Produce:
-            '大嘴花可以一口吞掉一整只僵尸，但是他们消化僵尸的时候很脆弱。<p>伤害：<font color="#FF0000">巨大</font><br>范围：<font color="#FF0000">非常近</font><br>特点：<font color="#FF0000">消化时间很长</font></p>大嘴花几乎可以去“恐怖小店”，来表演它的绝技了，不过他的经纪人压榨了他太多的钱，所以他没去成。尽管如此，大嘴花没有怨言，只说了句这只是交易的一部分。',
+            'Chompers can devour a zombie whole, but they are vulnerable while chewing.<p>Damage： <font color="#FF0000">massive</font><br>Range： <font color="#FF0000">very short</font><br>Special： <font color="#FF0000">long delay between chomps</font></p>Chomper almost got a gig doing stunts for The Little Shop of Horrors but it fell through when his agent demanded too much on the front end. Chomper\'s not resentful, though. He says it\'s just part of the business.',
         GetDX: function () {
             return -40;
         },
@@ -1771,7 +1771,7 @@ var CPlants = NewO({
     }),
     oFumeShroom = InheritO(CPlants, {
         EName: "oFumeShroom",
-        CName: "大喷菇",
+        CName: "Fume-shroom",
         width: 100,
         height: 88,
         beAttackedPointR: 80,
@@ -1788,9 +1788,9 @@ var CPlants = NewO({
             "images/Plants/FumeShroom/FumeShroomBullet.gif",
         ],
         AudioArr: ["fume"],
-        Tooltip: "喷射可以穿过门板的气液",
+        Tooltip: "Shoots fumes that can pass through screen doors",
         Produce:
-            '大喷菇喷出的臭气可以穿透铁丝网门。<p>伤害：<font color="#FF0000">普通，可穿透铁丝网门</font><br>范围：<font color="#FF0000">臭气中的所有僵尸<br>白天睡觉</font></p>“我以前那份没前途的工作，是为一个面包房生产酵母孢，”大喷菇说。“然后小喷菇，上帝保佑它，告诉了我这个喷杀僵尸的机会。现在我真觉得自己完全不同了。”',
+            'Fume-shrooms shoot fumes that can pass through screen doors.<p>Damage： <font color="#FF0000">normal, penetrates screen doors</font><br>Range： <font color="#FF0000">all zombies in the fume cloud<br>Sleeps during the day</font></p>"I was in a dead-end job," says Fume-shroom. "Then Puff-shroom, bless \'im, told me about this great opportunity blasting zombies. Now I really feel like I\'m making a difference."',
         GetDY: function (b, c, a) {
             return a[0] ? -18 : -10;
         },
@@ -1854,7 +1854,7 @@ var CPlants = NewO({
     }),
     oCoffeeBean = InheritO(CPlants, {
         EName: "oCoffeeBean",
-        CName: "咖啡豆",
+        CName: "Coffee Bean",
         width: 39,
         height: 97,
         beAttackedPointL: 10,
@@ -1864,9 +1864,9 @@ var CPlants = NewO({
         canEat: 0,
         PicArr: ["images/Card/Plants/CoffeeBean.png", "images/Plants/CoffeeBean/0.gif", "images/Plants/CoffeeBean/CoffeeBean.gif", "images/Plants/CoffeeBean/CoffeeBeanEat.gif" + $Random],
         AudioArr: ["coffee", "wakeup"],
-        Tooltip: "唤醒在白天里睡觉的蘑菇类植物",
+        Tooltip: "Plant it on a mushroom to wake it up",
         Produce:
-            '咖啡豆，可以唤醒睡眠中的蘑菇们。<p>使用方法：<font color="#FF0000">单独使用，立即生效</font><br>特点：<font color="#FF0000">可以种在其他植物上，用来唤醒蘑菇们</font></p>咖啡豆：“嘿，伙计们！嘿，怎么回事？是谁？嘿！你瞧见那个东西没？什么东西？哇！是狮子！”嗯，咖啡豆确定，这样可以让自己很兴奋。',
+            'Use Coffee Beans to wake up sleeping mushrooms.<p>Usage： <font color="#FF0000">single use, instant</font><br>Special： <font color="#FF0000">can be planted over another plant, wakes up mushrooms</font></p>"Hey, guys, hey!" says Coffee Bean. "Hey! What\'s up? Who\'s that? Hey! Didja see that thing? What thing? Whoa! Lions!" Yep, Coffee Bean sure does get excited.',
         InitTrigger: function () {},
         GetDBottom: function () {
             return 49;
@@ -1899,7 +1899,7 @@ var CPlants = NewO({
     }),
     oGloomShroom = InheritO(oFumeShroom, {
         EName: "oGloomShroom",
-        CName: "曾哥",
+        CName: "Gloom-shroom",
         width: 88,
         height: 83,
         beAttackedPointR: 68,
@@ -1914,9 +1914,9 @@ var CPlants = NewO({
             "images/Plants/GloomShroom/GloomShroomBullet.gif",
         ],
         AudioArr: ["kernelpult", "kernelpult2"],
-        Tooltip: "围绕自身释放大量绵羊音<br>(需要大喷菇)",
+        Tooltip: "Releases heavy fumes in an area around itself<br>(requires fume-shroom)",
         Produce:
-            '伪娘终结者，喜欢围绕自身释放大量绵羊音<p><font color="#FF0000">必须种植在大喷菇上</font></p>起初人们一直非议他，后来曾哥用自己独特的绵羊音横扫了宇宙拆迁办，全世界都拜倒在他的脚下。“听说有个节目叫‘快男’？”曾哥说，“没有我在他们真应该感到羞愧。”他于是决定明年去看看。',
+            'Gloom-shrooms release heavy fumes in an area around themselves.<p><font color="#FF0000">Must be planted on fume-shrooms</font></p>"I\'ve always enjoyed releasing heavy fumes," says Gloom Shroom. "I know a lot of people aren\'t cool with that. They say it\'s rude or that it smells bad. All I can say is, would you rather have your brain eaten by zombies?"',
         CanGrow: function (b, a, d) {
             var c = b[1];
             return c && c.EName == "oFumeShroom";
@@ -2004,7 +2004,7 @@ var CPlants = NewO({
     }),
     oPuffShroom = InheritO(oFumeShroom, {
         EName: "oPuffShroom",
-        CName: "小喷菇",
+        CName: "Puff-shroom",
         width: 40,
         height: 66,
         beAttackedPointL: 15,
@@ -2020,9 +2020,9 @@ var CPlants = NewO({
             "images/Plants/ShroomBulletHit.gif",
         ],
         AudioArr: ["puff"],
-        Tooltip: "向敌人发射短程孢子",
+        Tooltip: "Shoots short-ranged spores at the enemy",
         Produce:
-            '小喷菇是免费的，不过射程很近。<p>伤害：<font color="#FF0000">中等</font><br>范围：<font color="#FF0000">近<br>白天要睡觉</font></p>小喷菇：“我也是最近才知道僵尸的存在，和很多蘑菇一样，我只是把他们想象成童话和电影里的怪物。不过这次的经历已经让我大开眼界了。',
+            'Puff-shrooms are cheap, but can only fire a short distance.<p>Damage： <font color="#FF0000">normal</font><br>Range： <font color="#FF0000">short<br>Sleeps during the day</font></p>"I only recently became aware of the existence of zombies," says Puff-shroom. "Like many fungi, I\'d just assumed they were fairy tales or movie monsters. This whole experience has been a huge eye-opener for me."',
         GetDX: CPlants.prototype.GetDX,
         getTriggerRange: function (a, b, c) {
             return [[b, Math.min(c + 250, oS.W), 0]];
@@ -2064,7 +2064,7 @@ var CPlants = NewO({
     }),
     oScaredyShroom = InheritO(oFumeShroom, {
         EName: "oScaredyShroom",
-        CName: "胆小菇",
+        CName: "Scaredy-shroom",
         width: 57,
         height: 81,
         beAttackedPointR: 37,
@@ -2081,9 +2081,9 @@ var CPlants = NewO({
             "images/Plants/ShroomBullet.gif",
             "images/Plants/ShroomBulletHit.gif",
         ],
-        Tooltip: "远程射手, 但敌人靠近时会蜷缩不动",
+        Tooltip: "Long-ranged shooter that hides when enemies get near it",
         Produce:
-            '胆小菇是一种远程射手，敌人接近后会躲起来。<p>伤害：<font color="#FF0000">普通</font><br>特点：<font color="#FF0000">敌人接近后就停止攻击<br>白天睡觉</font></p>“谁在那？”胆小菇低声说，声音细微难辨。“走开！我不想见任何人。除非……除非你是马戏团的人。”',
+            'Scaredy-shrooms are long-ranged shooters that hide when enemies get near them.<p>Damage： <font color="#FF0000">normal</font><br>Special： <font color="#FF0000">stops shooting when enemy is close<br>Sleeps during the day</font></p>"Who\'s there?" whispers Scaredy-shroom, voice barely audible. "Go away. I don\'t want to see anybody. Unless it\'s the man from the circus."',
         GetDX: CPlants.prototype.GetDX,
         getTriggerRange: CPlants.prototype.getTriggerRange,
         getTriggerR: function (c) {
@@ -2167,7 +2167,7 @@ var CPlants = NewO({
     }),
     oHypnoShroom = InheritO(oFumeShroom, {
         EName: "oHypnoShroom",
-        CName: "魅惑菇",
+        CName: "Hypno-shroom",
         width: 71,
         height: 78,
         beAttackedPointL: 10,
@@ -2175,9 +2175,9 @@ var CPlants = NewO({
         SunNum: 75,
         coolTime: 30,
         PicArr: ["images/Card/Plants/HypnoShroom.png", "images/Plants/HypnoShroom/0.gif", "images/Plants/HypnoShroom/HypnoShroom.gif", "images/Plants/HypnoShroom/HypnoShroomSleep.gif"],
-        Tooltip: "让一只僵尸为你作战",
+        Tooltip: "Makes a zombie fight for you",
         Produce:
-            '当僵尸吃下魅惑菇后，他将会掉转方向为你作战。<p>使用方法：<font color="#FF0000">单独使用，接触生效</font><br>特点：<font color="#FF0000">让一只僵尸为你作战<br>白天睡觉</font></p>魅惑菇声称：“僵尸们是我们的朋友，他们被严重误解了，僵尸们在我们的生态环境里扮演着重要角色。我们可以也应当更努力地让他们学会用我们的方式来思考。”',
+            'When eaten, Hypno-shrooms will make a zombie turn around and fight for you.<p>Usage： <font color="#FF0000">single use, on contact</font><br>Special： <font color="#FF0000">makes a zombie fight for you<br>Sleeps during the day</font></p>"Zombies are our friends," asserts Hypno-shroom. "They\'re badly misunderstood creatures who play a valuable role in our ecology. We can and should do more to bring them round to our way of thinking."',
         InitTrigger: function () {},
         getHurt: function (d, b, a) {
             var c = this;
@@ -2196,7 +2196,7 @@ var CPlants = NewO({
     }),
     oIceShroom = InheritO(oFumeShroom, {
         EName: "oIceShroom",
-        CName: "寒冰菇",
+        CName: "Ice-shroom",
         width: 83,
         height: 75,
         beAttackedPointR: 63,
@@ -2211,9 +2211,9 @@ var CPlants = NewO({
             "images/Plants/IceShroom/icetrap.gif",
         ],
         AudioArr: ["frozen", "wakeup"],
-        Tooltip: "暂时使画面里的所有敌人停止行动",
+        Tooltip: "Temporarily immobilizes all zombies on the screen",
         Produce:
-            '寒冰菇，能短暂的冻结屏幕上所有僵尸。<p>伤害：<font color="#FF0000">非常低，冻结僵尸</font><br>范围：<font color="#FF0000">屏幕上的所有僵尸</font><br>用法：<font color="#FF0000">单独使用，立即生效<br>白天睡觉</font></p>寒冰菇皱着眉头，倒不是因为它不高兴或不满意，只是因为，它儿时因受创伤而遗留下了面瘫。',
+            'Ice-shrooms temporarily immobilize all zombies on the screen.。<p>Damage： <font color="#FF0000">very light, immobilizes zombies</font><br>Range： <font color="#FF0000">all zombies on the screen</font><br>Usage： <font color="#FF0000">single use, instant<br>Sleeps during the day</font></p>Ice-shroom frowns, not because he\'s unhappy or because he disapproves, but because of a childhood injury that left his facial nerves paralyzed.',
         GetDX: CPlants.prototype.GetDX,
         GetDY: CPlants.prototype.GetDY,
         InitTrigger: function () {},
@@ -2268,7 +2268,7 @@ var CPlants = NewO({
     }),
     oSunShroom = InheritO(oFumeShroom, {
         EName: "oSunShroom",
-        CName: "阳光菇",
+        CName: "Sun-shroom",
         width: 59,
         height: 61,
         beAttackedPointL: 15,
@@ -2277,9 +2277,9 @@ var CPlants = NewO({
         Stature: -1,
         Status: 0,
         PicArr: ["images/Card/Plants/SunShroom.png", "images/Plants/SunShroom/0.gif", "images/Plants/SunShroom/SunShroom2.gif", "images/Plants/SunShroom/SunShroomSleep.gif", "images/Plants/SunShroom/SunShroom.gif"],
-        Tooltip: "开始提供少量的阳光, 一段时间后提供正常量的阳光",
+        Tooltip: "Gives small sun at first and normal sun later",
         Produce:
-            '阳光菇开始提供少量阳光，稍后提供正常数量阳光。<p>生产阳光：<font color="#FF0000">开始低，之后正常<br>白天睡觉</font></p>阳光菇讨厌阳光。恨到当它内部产生点阳光时，就尽可能快的吐出来。它就是不能忍受这个。对它来说，阳光令人厌恶。',
+            'Sun-shrooms give small sun at first and normal sun later.<p>Sun production： <font color="#FF0000">low, then normal<br>Sleeps during the day</font></p>Sun-shroom hates sun. He hates it so much that when it builds up in his system, he spits it out as fast as he can. He just won\'t abide it. To him, sun is crass.',
         GetDX: CPlants.prototype.GetDX,
         GetDY: CPlants.prototype.GetDY,
         InitTrigger: function () {},
