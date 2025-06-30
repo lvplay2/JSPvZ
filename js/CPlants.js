@@ -145,7 +145,7 @@ var CPlants = NewO({
     }),
     oGraveBuster = InheritO(CPlants, {
         EName: "oGraveBuster",
-        CName: "墓地苔",
+        CName: "Grave Buster",
         width: 99,
         height: 106,
         beAttackedPointR: 70,
@@ -167,9 +167,9 @@ var CPlants = NewO({
             return -30;
         },
         InitTrigger: function () {},
-        Tooltip: "把它种在墓碑上用来吞噬墓碑",
+        Tooltip: "Plant it on a grave to remove the grave",
         Produce:
-            '墓地苔用来吃掉墓碑。<p>使用方法：<font color="#FF0000">单次使用，只对墓碑生效。</font><br>特点：<font color="#FF0000">吞噬墓碑。</font></p>尽管墓地苔的外表十分吓人，但他想要所有人都知道，其实他喜欢小猫咪，而且利用业余时间，在一家僵尸康复中心做志愿者。“我只是在做正确的事情，”他说。',
+            'Plant Grave Busters on graves to remove the graves.<p>Usage: <font color="#FF0000">single use, must be planted on graves</font><br>Special: <font color="#FF0000">removes graves</font></p>Despite Grave Buster\'s fearsome appearance, he wants everyone to know that he loves kittens and spends his off hours volunteering at a local zombie rehabilitation center. "It\'s just the right thing to do," he says.',
         PrivateBirth: function (a) {
             PlayAudio("gravebusterchomp");
             oSym.addTask(
@@ -187,7 +187,7 @@ var CPlants = NewO({
     }),
     oLawnCleaner = InheritO(CPlants, {
         EName: "oLawnCleaner",
-        CName: "草地剪草机",
+        CName: "Lawn Mower",
         width: 71,
         height: 57,
         beAttackedPointL: 0,
@@ -205,7 +205,7 @@ var CPlants = NewO({
             b.beAttacked && b.Altitude > 0 && ((this.canTrigger = 0), this.NormalAttack(this));
         },
         BoomDie: function () {},
-        Tooltip: "最普通的草地剪草机",
+        Tooltip: " ",
         NormalAttack: function (a) {
             PlayAudio(a.AudioArr[0]);
             (function (b, c, k, j, e, g) {
@@ -221,26 +221,26 @@ var CPlants = NewO({
     }),
     oPoolCleaner = InheritO(oLawnCleaner, {
         EName: "oPoolCleaner",
-        CName: "池塘清扫车",
+        CName: "Pool Cleaner",
         width: 47,
         height: 64,
         beAttackedPointL: 0,
         beAttackedPointR: 47,
         SunNum: 0,
         PicArr: ["images/interface/PoolCleaner.png"],
-        Tooltip: "池塘清扫车",
+        Tooltip: " ",
         AudioArr: ["pool_cleaner"],
     }),
     oBrains = InheritO(CPlants, {
         EName: "oBrains",
-        CName: "脑子",
+        CName: "Brains",
         width: 32,
         height: 31,
         beAttackedPointL: 0,
         beAttackedPointR: 32,
         SunNum: 0,
         PicArr: ["images/interface/brain.png"],
-        Tooltip: "美味的脑子",
+        Tooltip: " ",
         NormalGif: 0,
         InitTrigger: function () {},
         PrivateBirth: function (a) {
@@ -263,7 +263,7 @@ var CPlants = NewO({
     }),
     oStarfruit = InheritO(CPlants, {
         EName: "oStarfruit",
-        CName: "杨桃",
+        CName: "Starfruit",
         width: 77,
         height: 70,
         beAttackedPointR: 57,
@@ -272,9 +272,9 @@ var CPlants = NewO({
             return a[0] ? -17 : -10;
         },
         PicArr: ["images/Card/Plants/Starfruit.png", "images/Plants/Starfruit/0.gif", "images/Plants/Starfruit/Starfruit.gif", "images/Plants/Starfruit/Star.gif"],
-        Tooltip: "向五个方向发射小杨桃",
+        Tooltip: "Shoots stars in five directions",
         Produce:
-            '杨桃可以向五个方向发射小杨桃。<p>伤害：<font color="#FF0000">中等</font><br>范围：<font color="#FF0000">五个方向</font></p>杨桃：“嘿，哥们，有一天我去看牙医，他说我有四个牙洞。我一数，我就只有一颗牙齿！一颗牙齿长了四个牙洞？怎么会这样啊？”',
+            'Starfruits shoot stars in five directions.<p>Damage： <font color="#FF0000">Normal</font><br>Range: <font color="#FF0000">five directions</font></p>"Aw, man," says Starfruit. "I went to the dentist the other day and he said that I have four cavities. I\'ve got --count it-- ONE tooth! Four cavities in one tooth? How does this happen?"',
         getTriggerRange: function (e, g, f) {
             var a = this.R,
                 b = GetY(a),
@@ -448,7 +448,7 @@ var CPlants = NewO({
     }),
     oPeashooter = InheritO(CPlants, {
         EName: "oPeashooter",
-        CName: "豌豆射手",
+        CName: "Peashooter",
         width: 71,
         height: 71,
         beAttackedPointR: 51,
@@ -456,9 +456,9 @@ var CPlants = NewO({
         BKind: 0,
         AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
         PicArr: ["images/Card/Plants/Peashooter.png", "images/Plants/Peashooter/0.gif", "images/Plants/Peashooter/Peashooter.gif", "images/Plants/PB00.gif", "images/Plants/PeaBulletHit.gif"],
-        Tooltip: "向敌人射出豌豆",
+        Tooltip: "Shoots peas at the enemy",
         Produce:
-            '豌豆射手，你的第一道防线。它们通过发射豌豆来攻击僵尸。<p>伤害：<font color="#FF0000">中等</font></p>一棵植物，怎么能如此快地生长，并发射如此多的豌豆呢？豌豆射手：“努力工作，奉献自己，再加上一份阳光，高纤维和氧化碳均衡搭配，这种健康早餐让一切成为可能。”',
+            'Peashooters are your first line of defense. They shoot peas at attacking zombies.<p>Damage： <font color="#FF0000">normal</font></p>How can a single plant grow and shoot so many peas so quickly? Peashooter says, "Hard work, commitment, and a healthy, well-balanced breakfast of sunlight and high-fiber carbon dioxide make it all possible."',
         PrivateBirth: function (a) {
             a.BulletEle = NewImg(0, a.PicArr[3], "left:" + (a.AttackedLX - 40) + "px;top:" + (a.pixelTop + 3) + "px;visibility:hidden;z-index:" + (a.zIndex + 2));
         },
@@ -496,14 +496,14 @@ var CPlants = NewO({
     }),
     oSnowPea = InheritO(oPeashooter, {
         EName: "oSnowPea",
-        CName: "寒冰射手",
+        CName: "Snow Pea",
         SunNum: 175,
         BKind: -1,
         PicArr: ["images/Card/Plants/SnowPea.png", "images/Plants/SnowPea/0.gif", "images/Plants/SnowPea/SnowPea.gif", "images/Plants/PB-10.gif", "images/Plants/PeaBulletHit.gif"],
         AudioArr: ["frozen", "splat1", "splat2", "splat3", "shieldhit", "shieldhit2", "plastichit"],
-        Tooltip: "寒冰射手可造成伤害, 同时又有减速效果",
+        Tooltip: "Shoots frozen peas that damage and slow the enemy",
         Produce:
-            '寒冰射手会发射寒冰豌豆来攻击敌人，并具有减速效果。<p>伤害：<font color="#FF0000">中等，带有减速效果</font></p>人们经常告诉寒冰射手他是多么“冷酷”，或者告诫他要“冷静”。他们叫他要“保持镇静”。寒冰射手只是转转他的眼睛。其实他都听见了。',
+            'Snow Peas shoot frozen peas that damage and slow the enemy.<p>Damage： <font color="#FF0000">normal, slows zombies</font></p>Folks often tell Snow Pea how "cool" he is, or exhort him to "chill out." They tell him to "stay frosty." Snow Pea just rolls his eyes. He\'s heard \'em all.',
         NormalAttack: function () {
             var a = this,
                 b = "PB" + Math.random();
@@ -535,16 +535,16 @@ var CPlants = NewO({
     }),
     oRepeater = InheritO(oPeashooter, {
         EName: "oRepeater",
-        CName: "双发射手",
+        CName: "Repeater",
         width: 73,
         height: 71,
         beAttackedPointR: 53,
         SunNum: 200,
         PicArr: ["images/Card/Plants/Repeater.png", "images/Plants/Repeater/0.gif", "images/Plants/Repeater/Repeater.gif", "images/Plants/PB00.gif", "images/Plants/PeaBulletHit.gif"],
         AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
-        Tooltip: "一次发射两颗豌豆",
+        Tooltip: "Fires two peas at a time",
         Produce:
-            '双发射手可以一次发射两颗豌豆<p>伤害：<font color="#FF0000">中等(每颗)</font><br>发射速度：<font color="#FF0000">两倍</font></p>双发射手很凶悍，他是在街头混大的。他不在乎任何人的看法，无论是植物还是僵尸，他打出豌豆，是为了让别人离他远点。其实呢，双发射手一直暗暗地渴望着爱情。',
+            'Repeaters fire two peas at a time.<p>Damage： <font color="#FF0000">normal (for each pea)</font><br>Firing speed: <font color="#FF0000">2x</font></p>Repeater is fierce. He\'s from the streets. He doesn\'t take attitude from anybody, plant or zombie, and he shoots peas to keep people at a distance. Secretly, though, Repeater yearns for love.',
         NormalAttack1: oPeashooter.prototype.NormalAttack,
         NormalAttack: function (a) {
             this.NormalAttack1();
@@ -560,16 +560,16 @@ var CPlants = NewO({
     }),
     oThreepeater = InheritO(oPeashooter, {
         EName: "oThreepeater",
-        CName: "三线射手",
+        CName: "Threepeater",
         width: 73,
         height: 80,
         beAttackedPointR: 53,
         SunNum: 325,
         PicArr: ["images/Card/Plants/Threepeater.png", "images/Plants/Threepeater/0.gif", "images/Plants/Threepeater/Threepeater.gif", "images/Plants/PB00.gif", "images/Plants/PeaBulletHit.gif"],
         AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
-        Tooltip: "一次射出三行的豌豆",
+        Tooltip: "Shoots peas in three lanes",
         Produce:
-            '三线射手可以在三条线上同时射出豌豆。<p>伤害：<font color="#FF0000">普通(每颗)</font><br>范围：<font color="#FF0000">三线</font></p>三线射手喜欢读书，下棋和在公园里呆坐。他也喜欢演出，特别是现代爵士乐。“我正在寻找我生命中的另一半，”他说。三线射手最爱的数字是5。',
+            'Threepeaters shoot peas in three lanes.<p>Damage： <font color="#FF0000">normal (for each pea)</font><br>Range: <font color="#FF0000">three lanes</font></p>Threepeater likes reading, backgammon and long periods of immobility in the park. Threepeater enjoys going to shows, particularly modern jazz. "I\'m just looking for that special someone," he says. Threepeater\'s favorite number is 5.',
         getTriggerR: function (a) {
             return [a > 2 ? a - 1 : 1, a < oS.R ? Number(a) + 1 : a];
         },
@@ -624,7 +624,7 @@ var CPlants = NewO({
     }),
     oGatlingPea = InheritO(oPeashooter, {
         EName: "oGatlingPea",
-        CName: "加特林",
+        CName: "Gatling Pea",
         width: 88,
         height: 84,
         beAttackedPointR: 68,
@@ -632,9 +632,9 @@ var CPlants = NewO({
         coolTime: 50,
         PicArr: ["images/Card/Plants/GatlingPea.png", "images/Plants/GatlingPea/0.gif", "images/Plants/GatlingPea/GatlingPea.gif", "images/Plants/PB00.gif", "images/Plants/PeaBulletHit.gif"],
         AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
-        Tooltip: "一次发射四颗豌豆<br>(需要双发射手)",
+        Tooltip: "Shoots four peas at a time<br>(requires repeater)",
         Produce:
-            '加特林可以一次发射四颗豌豆<p>伤害：<font color="#FF0000">中等(每颗)</font><br>发射速度：<font color="#FF0000">四倍<br>只能种在双发射手上</font></p>当加特林宣布他要参军的时候，他的父母很为他担心，他们异口同声地对他说：“亲爱的，但这太危险了。”加特林拒绝让步，“生活本就危险，”他这样回答着，此时他的眼睛里，正闪烁着钢铁般的信念。',
+            'Gatling Peas shoot four peas at a time.<p>Damage： <font color="#FF0000">normal (for each pea)</font><br>Firing Speed: <font color="#FF0000">4x<br>Must be planted on repeaters</font></p>Gatling Pea\'s parents were concerned when he announced his intention to join the military. "But honey, it\'s so dangerous!" they said in unison. Gatling Pea refused to budge. "Life is dangerous," he replied, eyes glinting with steely conviction.',
         PrivateBirth: function (c) {
             var b = c.AttackedLX,
                 a = b - 40;
@@ -661,16 +661,16 @@ var CPlants = NewO({
     }),
     oSplitPea = InheritO(oPeashooter, {
         EName: "oSplitPea",
-        CName: "分裂射手",
+        CName: "Split Pea",
         width: 92,
         height: 72,
         beAttackedPointR: 72,
         SunNum: 125,
         PicArr: ["images/Card/Plants/SplitPea.png", "images/Plants/SplitPea/0.gif", "images/Plants/SplitPea/SplitPea.gif", "images/Plants/PB00.gif", "images/Plants/PB01.gif", "images/Plants/PeaBulletHit.gif"],
         AudioArr: ["splat1", "splat2", "splat3", "plastichit", "shieldhit", "shieldhit2"],
-        Tooltip: "前后双向发射豌豆",
+        Tooltip: "Shoots peas forward and backwards",
         Produce:
-            '分裂射手，可以向前后两个方向发射豌豆。<p>伤害：<font color="#FF0000">中等</font><br>范围：<font color="#FF0000">前面和后面</font><br>发射速度：<font color="#FF0000">前面为正常速度，后面为两倍速度</font></p>分裂射手：“没错，我就是双子座。我知道，这的确很令人惊奇。不过，有两个头，或者实际上，长着一个头和一个类似头的东西，在背上，对我这条线上的防守帮助很大。',
+            'Split Peas shoot peas forward and backwards.<p>Damage: <font color="#FF0000">normal</font><br>Range： <font color="#FF0000">forward and backwards</font><br>Firing Speed：<font color="#FF0000">1x forward, 2x backwards</font></p>"Yeah, I\'m a Gemini," says Split Pea. "I know, big surprise. But having two heads --or really, one head with a large head-like growth on the back-- pays off big in my line of work."',
         GetDX: function () {
             return -55;
         },
@@ -768,14 +768,14 @@ var CPlants = NewO({
     }),
     oSunFlower = InheritO(CPlants, {
         EName: "oSunFlower",
-        CName: "向日葵",
+        CName: "Sunflower",
         width: 73,
         height: 74,
         beAttackedPointR: 53,
         SunNum: 50,
         PicArr: ["images/Card/Plants/SunFlower.png", "images/Plants/SunFlower/0.gif", "images/Plants/SunFlower/SunFlower1.gif", "images/Plants/SunFlower/SunFlower.gif"],
-        Tooltip: "提供你额外的阳光",
-        Produce: '向日葵，为你生产额外阳光的经济作物。尝试尽可能多种植吧！<p>阳光产量：<font color="#FF0000">中等</font></p>向日葵情不自禁地和着节拍起舞。是什么节拍呢？嗨，是大地自己用来提神的爵士节拍，这种频率的节拍，只有向日葵才能听到。',
+        Tooltip: "Gives you additional sun",
+        Produce: 'Sunflowers are essential for you to produce extra sun. Try planting as many as you can!<p>Sun production： <font color="#FF0000">normal</font></p>Sunflower can\'t resist bouncing to the beat. Which beat is that? Why, the life-giving jazzy rhythm of the Earth itself, thumping at a frequency only Sunflower can hear.',
         BirthStyle: function (c, e, b, a) {
             var d = b.childNodes[1];
             d.src = "images/Plants/SunFlower/SunFlower.gif";
@@ -849,16 +849,16 @@ var CPlants = NewO({
     }),
     oTwinSunflower = InheritO(oSunFlower, {
         EName: "oTwinSunflower",
-        CName: "双子向日葵",
+        CName: "Twin Sunflower",
         width: 83,
         height: 84,
         beAttackedPointR: 63,
         SunNum: 150,
         coolTime: 50,
         PicArr: ["images/Card/Plants/TwinSunflower.png", "images/Plants/TwinSunflower/0.gif", "images/Plants/TwinSunflower/TwinSunflower1.gif", "images/Plants/TwinSunflower/TwinSunflower.gif"],
-        Tooltip: "一次提供两倍于向日葵的阳光量<br>(需要向日葵)",
+        Tooltip: "Gives twice as much sun as a sunflower<br>(requires sunflower)",
         Produce:
-            '双子向日葵的阳光产量是普通向日葵的两倍。<p>阳光产量：<font color="#FF0000">双倍<br>只能种在普通向日葵上</font></p>这是一个疯狂的夜晚，禁忌的科学技术，让双子向日葵来到了这个世界。电闪雷鸣，狂风怒吼，都在表示着这个世界对他的拒绝。但是一切都无济于事，双子向日葵他却仍然活着！',
+            'Twin Sunflowers give twice as much sun as a normal sunflower.<p>Sun production： <font color="#FF0000">double<br>Must be planted on sunflowers</font></p>It was a crazed night of forbidden science that brought Twin Sunflower into existence. Thunder crashed overhead, strange lights flickered, even the very roaring wind seemed to hiss its angry denial. But to no avail. Twin Sunflower was alive, ALIVE!',
         CanGrow: function (b, a, d) {
             var c = b[1];
             return c && c.EName == "oSunFlower";
@@ -904,7 +904,7 @@ var CPlants = NewO({
     }),
     oPumpkinHead = InheritO(CPlants, {
         EName: "oPumpkinHead",
-        CName: "南瓜头",
+        CName: "Pumpkin",
         width: 97,
         height: 67,
         beAttackedPointL: 15,
@@ -924,9 +924,9 @@ var CPlants = NewO({
             "images/Plants/PumpkinHead/pumpkin_damage2.gif",
             "images/Plants/PumpkinHead/Pumpkin_back.gif",
         ],
-        Tooltip: "能保护种在里面的植物",
+        Tooltip: "Protects plants that are within its shell",
         Produce:
-            '南瓜头，可以用他的外壳保护其他植物。<p>韧性：<font color="#FF0000">高</font><br>特点：<font color="#FF0000">可以种在其他植物上</font></p>南瓜头最近都没收到，关于他表哥刃菲尔德的消息。很明显，刃菲尔德是个大明星，是一种……叫什么运动来着……的体育明星？佩格跳跳球大师？南瓜头反正搞不懂是什么运动，他只想做好他自己的工作。',
+            'Pumpkins protect plants that are within their shells.<p>Toughness： <font color="#FF0000">high</font><br>Special：<font color="#FF0000">can be planted over another plant</font></p>Pumpkin hasn\'t heard from his cousin Renfield lately. Apparently Renfield\'s a big star, some kind of... what was it... sports hero? Peggle Master? Pumpkin doesn\'t really get it. He just does his job.',
         CanGrow: function (c, b, d) {
             var a = b + "_" + d;
             return c[2] ? 1 : oGd.$LF[b] == 1 ? !(d < 1 || d > 9 || oGd.$Crater[a] || oGd.$Tombstones[a]) : c[0];
@@ -965,7 +965,7 @@ var CPlants = NewO({
     }),
     oFlowerPot = InheritO(CPlants, {
         EName: "oFlowerPot",
-        CName: "花盆",
+        CName: "Flower Pot",
         width: 72,
         height: 68,
         beAttackedPointR: 52,
@@ -983,15 +983,15 @@ var CPlants = NewO({
                 a = f < 1 || f > 9;
             return b % 2 ? (b < 3 ? !(a || e[1] || e[2] || e[0] || oGd.$Crater[c] || oGd.$Tombstones[c]) : !(a || e[0] || oGd.$Crater[c])) : 0;
         },
-        Tooltip: "可以让植物栽种在屋顶上",
-        Produce: '花盆可以让你在屋顶上种植植物。<p>特点：<font color="#FF0000">允许你在屋顶上种植</font></p>“我是一个让植物栽种的花盆，但我也是一棵植物。是不是很意外？',
+        Tooltip: "Lets you plant on the roof",
+        Produce: 'Flower Pots let you plant on the roof.<p>Special： <font color="#FF0000">allows you to plant on the roof</font></p>"I\'m a pot for planting. Yet I\'m also a plant. HAS YOUR MIND EXPLODED YET?"',
         InitTrigger: function () {},
     }),
     oLilyPad = InheritO(oFlowerPot, {
         BookHandBack: 4,
         Stature: -1,
         EName: "oLilyPad",
-        CName: "睡莲",
+        CName: "Lily Pad",
         width: 79,
         height: 58,
         beAttackedPointR: 59,
@@ -1003,13 +1003,13 @@ var CPlants = NewO({
             var a = b + "_" + d;
             return !(d < 1 || d > 9 || oGd.$LF[b] - 2 || c[0] || c[1] || oGd.$Crater[a]);
         },
-        Tooltip: "使你能够将非水生植物种在上面",
+        Tooltip: "Lets you plant non-aquatic plants on top of it",
         Produce:
-            '睡莲可以让你种植非水生植物在它上面。<p>特点：<font color="#FF0000">非水生植物可以种植在它上面<br>必须种植在水面</font></p>睡莲从不抱怨，它也从来不想知道发生了什么事。在它身上种植物，它也不会说什么。难道，它有什么惊奇想法或者可怕的秘密？没人知道。睡莲把这些都埋藏在心底。',
+            'Lily pads let you plant non-aquatic plants on top of them.<p>Special： <font color="#FF0000">non-aquatic plants can be planted on top of it<br>Must be planted in water</font></p>Lily Pad never complains. Lily Pad never wants to know what\'s going on. Put a plant on top of Lily Pad, he won\'t say a thing. Does he have startling opinions or shocking secrets? Nobody knows. Lily Pad keeps it all inside.',
     }),
     oPotatoMine = InheritO(CPlants, {
         EName: "oPotatoMine",
-        CName: "土豆雷",
+        CName: "Potato Mine",
         width: 75,
         height: 55,
         beAttackedPointR: 55,
@@ -1048,9 +1048,9 @@ var CPlants = NewO({
             "images/Plants/PotatoMine/PotatoMine_mashed.gif",
             "images/Plants/PotatoMine/ExplosionSpudow.gif",
         ],
-        Tooltip: "敌人接触后爆炸<br>需要时间安放",
+        Tooltip: "Explodes on contact, but takes time to arm itself",
         Produce:
-            '土豆雷具有强大的威力，但是他们需要点时间来武装自己。你应把他们种在僵尸前进的路上，当他们一被接触就会发生爆炸。<p>伤害：<font color="FF0000">巨大</font><br>范围：<font color="#FF0000">一个小区域内的所有僵尸</font><br>使用方法：<font color="#FF0000">单独使用，需要一定准备时间才能起作用。</font></p>一些人说土豆雷很懒，因为他总是把所有事情留到最后。土豆雷才没空理他们，他正忙着考虑他的投资战略呢。',
+            'Needs a while to arm themselves. You should plant them ahead of zombies. They will explode on contact.<p>Damage： <font color="FF0000">massive</font><br>Range： <font color="#FF0000">all zombies in a small area</font><br>Usage： <font color="#FF0000">single use, delayed activation</font></p>Some folks say Potato Mine is lazy, that he leaves everything to the last minute. Potato Mine says nothing. He\'s too busy thinking about his investment strategy.',
         Status: 0,
         AudioArr: ["potato_mine"],
         canTrigger: 0,
@@ -1114,7 +1114,7 @@ var CPlants = NewO({
     }),
     oTorchwood = InheritO(CPlants, {
         EName: "oTorchwood",
-        CName: "火炬树桩",
+        CName: "Torchwood",
         width: 73,
         height: 83,
         beAttackedPointR: 53,
@@ -1130,9 +1130,9 @@ var CPlants = NewO({
             "images/Plants/Torchwood/SputteringFire.gif",
         ],
         AudioArr: ["firepea", "ignite", "ignite2"],
-        Tooltip: "通过火炬树桩的豌豆将变为火球",
+        Tooltip: "Peas that pass through it turn into fireballs",
         Produce:
-            '火炬树桩可以把穿过他的豌豆变成火球，可以造成两倍伤害。<p>特点：<font color="#FF0000">让穿过他的火球造成两倍伤害。火球也会对附近僵尸造成溅射伤害</font></p>每个人都喜欢并敬重火炬树桩。他们喜欢他的诚实和坚贞的友谊，以及增强豌豆伤害的能力。但他也有自己的秘密：他不识字！',
+            'Torchwoods turn peas that pass through them into fireballs that deal twice as much damage.<p>Special： <font color="#FF0000">doubles the damage of peas that pass through it.  Fireballs deal damage to nearby zombies on impact</font></p>They like him for his integrity, for his steadfast friendship, for his ability to greatly maximize pea damage. But Torchwood has a secret: he can\'t read.',
         PrivateBirth: function (c) {
             var a = c.R,
                 b = c.C;
@@ -1149,7 +1149,7 @@ var CPlants = NewO({
     }),
     oWallNut = InheritO(CPlants, {
         EName: "oWallNut",
-        CName: "坚果墙",
+        CName: "Wall-nut",
         width: 65,
         height: 73,
         beAttackedPointR: 45,
@@ -1157,8 +1157,8 @@ var CPlants = NewO({
         HP: 4000,
         coolTime: 30,
         PicArr: ["images/Card/Plants/WallNut.png", "images/Plants/WallNut/0.gif", "images/Plants/WallNut/WallNut.gif", "images/Plants/WallNut/Wallnut_cracked1.gif", "images/Plants/WallNut/Wallnut_cracked2.gif"],
-        Tooltip: "阻碍僵尸前进, 并保护你其他的植物",
-        Produce: '坚果墙拥有足以让你用来保护其它植物的坚硬外壳。<p>韧性：<font color="FF0000">高</font></p>坚果墙：“人们想知道，经常被僵尸啃的感觉怎样？他们不知道，我有限的感官，只能让我感到一种麻麻的感觉，像是，令人放松的背部按摩。”',
+        Tooltip: "Blocks off zombies and protects your other plants",
+        Produce: 'Wall-nuts have hard shells which you can use to protect your other plants.<p>Toughness：<font color="FF0000">high</font></p>"People wonder how I feel about getting constantly chewed on by zombies," says Wall-nut. "What they don\'t realize is that with my limited senses all I can feel is a kind of tingling, like a relaxing back rub."',
         CanGrow: function (c, b, f) {
             var a = b + "_" + f,
                 d = c[1],
@@ -1189,7 +1189,7 @@ var CPlants = NewO({
     }),
     oNutBowling = InheritO(CPlants, {
         EName: "oNutBowling",
-        CName: "坚果保龄球",
+        CName: "Wall-nut Bowling",
         width: 71,
         height: 71,
         beAttackedPointL: 10,
