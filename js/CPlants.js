@@ -2334,7 +2334,7 @@ var CPlants = NewO({
     }),
     oDoomShroom = InheritO(oFumeShroom, {
         EName: "oDoomShroom",
-        CName: "毁灭菇",
+        CName: "Doom-shroom",
         width: 102,
         height: 91,
         beAttackedPointR: 80,
@@ -2354,9 +2354,9 @@ var CPlants = NewO({
             "images/Plants/DoomShroom/crater31.png",
             "images/Plants/DoomShroom/Boom.png",
         ],
-        Tooltip: "造成大规模的伤害, 但会在原地留下一个坑, 坑中无法种植物",
+        Tooltip: "Destroys a large area, leaving a crater in its wake",
         Produce:
-            '毁灭菇可以摧毁大范围的僵尸，并留下一个不能种植物的大弹坑。<p>伤害：<font color="#FF0000">极高</font><br>范围：<font color="#FF0000">大范围内的所有僵尸</font><br>用法：<font color="#FF0000">单独使用，立即生效</font><br>特点：<font color="#FF0000">留下一个弹坑<br>白天睡觉</font></p>“你很幸运，我是和你一伙的，”毁灭菇说，“我能摧毁任何你所珍视的东西，小菜一碟。”',
+            'Doom-shrooms destroy everything in a large area and leave a crater that can\'t be planted on.<p>Damage： <font color="#FF0000">massive</font><br>Range： <font color="#FF0000">all zombies in a huge area</font><br>Usage： <font color="#FF0000">single use, instant</font><br>Special： <font color="#FF0000">leaves a crater<br>Sleeps during the day</font></p>"You\'re lucky I\'m on your side," says Doom-shroom. "I could destroy everything you hold dear. It wouldn\'t be hard."',
         InitTrigger: function () {},
         BirthStyle: function (c, d, b, a) {
             oS.DKind ? ((c.Sleep = 1), (b.childNodes[1].src = c.PicArr[c.SleepGif])) : ((c.Sleep = 0), (c.getHurt = function () {}), (b.childNodes[1].src = "images/Plants/DoomShroom/BeginBoom.gif"), c.NormalAttack(d));
@@ -2504,7 +2504,7 @@ var CPlants = NewO({
     }),
     oTangleKlep = InheritO(CPlants, {
         EName: "oTangleKlep",
-        CName: "缠绕海草",
+        CName: "Tangle Kelp",
         width: 90,
         height: 72,
         beAttackedPointL: 15,
@@ -2517,9 +2517,9 @@ var CPlants = NewO({
         },
         NormalGif: 1,
         PicArr: ["images/Card/Plants/TangleKlep.png", "images/Plants/TangleKlep/0.gif", "images/Plants/TangleKlep/Float.gif", "images/Plants/TangleKlep/Grab.png", "images/interface/splash.png"],
-        Tooltip: "可以将僵尸拉入水底的水生植物",
+        Tooltip: "Aquatic plant that pulls a zombie underwater",
         Produce:
-            '缠绕水草是一种可以把接近他的僵尸拉进水中的水生植物。<p>伤害：<font color="#FF0000">极高</font><br>用法：<font color="#FF0000">单独使用，接触后生效</font><br>特点：<font color="#FF0000">必须种在水中</font></p>“我是完全隐形的，”缠绕水草自己想，“我就藏在水面下，没人会看到我。”他的朋友告诉他，他们可以清楚地看到他。不过，缠绕水草似乎不想改变自己的看法。',
+            'Tangle Kelp are aquatic plants that pull the first zombie that nears them underwater.<p>Damage： <font color="#FF0000">massive</font><br>Usage： <font color="#FF0000">single use, on contact</font><br><font color="#FF0000">Must be planted in water</font></p>"I\'m totally invisible," Tangle Kelp thinks to himself. "I\'ll hide here just below the surface and nobody will see me." His friends tell him they can see him perfectly well, but he\'ll never change.',
         CanGrow: function (c, b, d) {
             var a = b + "_" + d;
             return !(oGd.$LF[b] != 2 || d < 1 || d > 9 || oGd.$Crater[a] || c[0] || c[1]);
@@ -2601,7 +2601,7 @@ var CPlants = NewO({
     }),
     oSeaShroom = InheritO(oPuffShroom, {
         EName: "oSeaShroom",
-        CName: "海蘑菇",
+        CName: "Sea-shroom",
         width: 48,
         height: 99,
         beAttackedPointL: 10,
@@ -2620,7 +2620,7 @@ var CPlants = NewO({
             var a = b + "_" + d;
             return !(d < 1 || d > 9 || oGd.$LF[b] - 2 || c[0] || c[1] || oGd.$Crater[a]);
         },
-        Tooltip: "发射短距离孢子的水生植物",
+        Tooltip: "Aquatic plant that shoots short-ranged spores",
         Produce:
-            '海蘑菇，能够发射短程孢子的水生植物。<p>伤害：<font color="#FF0000">普通</font><br>射程：<font color="#FF0000">短<br>必须种在水上<br>白天睡觉</font></p>海蘑菇从来没看到过大海，大海就在他的名字里，他总听到关于大海的事。他只是没找到合适的时间，总有一天……是的，他会见到海的。',
+            'Sea-shrooms are aquatic plants that shoot short ranged spores.<p>Damage： <font color="#FF0000">normal</font><br>Range： <font color="#FF0000">short<br>Must be planted in water<br>Sleeps during the day</font></p>Sea-shroom has never seen the sea. It\'s in his name, he\'s heard loads about it, but he\'s just never found the time. One day, though, it\'ll go down.',
     });
