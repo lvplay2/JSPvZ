@@ -8,7 +8,7 @@ oS.Init(
         ProduceSun: false,
         SunNum: 9990,
         DKind: 0,
-        LevelName: "我是僵尸对战版创建模式",
+        LevelName: "Custom I, Zombie level",
         LvlEName: "ImZombieCreateGame",
         LoadMusic: "Mountains",
         StartGameMusic: "Mountains",
@@ -51,7 +51,7 @@ oS.Init(
                                 "button",
                                 "position:absolute;left:750px;top:250px;height:50px;width:100px;font-family: 幼圆; font-size:18px",
                                 {
-                                    innerHTML: "保存布局",
+                                    innerHTML: "Save Level",
                                     onclick: function () {
                                         var g = oGd.$,
                                             k,
@@ -86,23 +86,23 @@ oS.Init(
                                                 m += (i = k.split("_"))[0] + i[1] + j[g[k].EName];
                                             }
                                         }
-                                        if ($User.Visitor.UserName == "游客") {
-                                            alert("只有登录用户可以保存进度！\n请登陆后再保存进度！");
+                                        if ($User.Visitor.UserName == "Guest") {
+                                            alert("Only logged in users can save progress! \nPlease log in before saving progress!");
                                             return;
                                         }
                                         if ($P.length < h * d) {
-                                            alert("植物必须布满设置范围！\n\n请布置完整后再次保存！");
+                                            alert("The plants must fill the set range! \n\nPlease save again after the arrangement is complete!");
                                             return;
                                         }
-                                        if ((f = prompt("请输入阳光数量，范围150-350且必须是25的倍数\n可选：150,175,200,225,250,275,300,325,350", "150")) == null) {
+                                        if ((f = prompt("Please enter the amount of sun, the range is 150-350 and must be a multiple of 25\nOptional: 150, 175, 200, 225, 250, 275, 300, 325, 350", "150")) == null) {
                                             return;
                                         }
                                         if (isNaN((f = Number(f))) || f % 25 != 0 || f < 150 || f > 350) {
-                                            alert("请输入一个范围在150-350之间且是25的倍数的数字！");
+                                            alert("Please enter a number between 150-350 and a multiple of 25!");
                                             return;
                                         }
-                                        if ((l = prompt("请输入自定义游戏的标题(50字符内)\n未输入则使用默认标题", "")) != null) {
-                                            $("btnClickSave").innerHTML = "正在保存";
+                                        if ((l = prompt("Please enter a custom title (within 50 characters)\nIf not entered, the default title will be used", "")) != null) {
+                                            $("btnClickSave").innerHTML = "Save";
                                             $("btnClickSave").disabled = "disabled";
                                             ClearChild($("JSPVZAjax"));
                                             NewEle("JSPVZAjax", "script", 0, { src: $User.Server.DataURL + "asp/ImZombieCreateGame.asp?SNum=" + f + "&T=" + escape(l) + "&C=" + escape(m), type: "text/javascript" }, document.body);
@@ -113,7 +113,7 @@ oS.Init(
                             );
                             oS.ArP.ArC = [1, c];
                         };
-                    innerText(NewEle("spanT", "span", "position:absolute;left:20px;width:620px;text-align: center; font-family: 幼圆; font-size: 14px;line-height:50px", 0, a), "选择摆放植物的列数：");
+                    innerText(NewEle("spanT", "span", "position:absolute;left:20px;width:620px;text-align: center; font-family: 幼圆; font-size: 14px;line-height:50px", 0, a), "Select the number of columns to place your plants in:");
                     innerText(
                         NewEle(
                             "btnClick1",

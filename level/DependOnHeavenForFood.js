@@ -32,7 +32,7 @@ oS.Init(
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
         SunNum: 100,
-        LevelName: "小游戏：靠天吃饭",
+        LevelName: "Depend On Heaven",
         LvlEName: "DependOnHeavenForFood",
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
     },

@@ -5,7 +5,7 @@ oS.Init(
         PicArr: ["images/interface/background1.jpg"],
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
-        LevelName: "小游戏：一次性消费",
+        LevelName: "Disposable Products",
         LvlEName: "DisposableProducts",
         LargeWaveFlag: { 15: $("imgFlag1") },
         StartGameMusic: "Watery Graves",

@@ -42,7 +42,7 @@ oS.Init(
         CanSelectCard: 1,
         DKind: 0,
         HaveFog: 3,
-        LevelName: "关卡 4-1",
+        LevelName: "Level 4-1",
         LvlEName: 31,
         AudioArr: ["crazydavelong1", "crazydavelong3"],
         LargeWaveFlag: { 10: $("imgFlag1") },
@@ -73,7 +73,7 @@ oS.Init(
                             },
                             []
                         );
-                        c.innerHTML = '<span style="font-size:22px">你知道，他们曾叫我“迷雾男”。(点击继续)</span>';
+                        c.innerHTML = '<span style="font-size:22px">You know, they used to call me "Fog Man" (Click to continue)</span>';
                         break;
                     case 1:
                         PlayAudio("crazydavelong3");
@@ -89,7 +89,7 @@ oS.Init(
                             },
                             []
                         );
-                        c.innerHTML = '<span style="font-size:22px">因为我曾停留在雾中并突然从人群中跳出！(点击继续)</span>';
+                        c.innerHTML = '<span style="font-size:22px">\'cause I would hang out in the fog and JUMP OUT AT PEOPLE! (Click to continue)</span>';
                         break;
                     case 2:
                         PlayAudio("crazydavelong3");
@@ -105,7 +105,7 @@ oS.Init(
                             },
                             []
                         );
-                        c.innerHTML = '<span style="font-size:22px">噢，那都是过去的事了。(点击继续)</span>';
+                        c.innerHTML = '<span style="font-size:22px">Ah, those were the days. (Click to continue)</span>';
                         break;
                     case 3:
                         $("dDave").src = "images/interface/Dave2.gif";

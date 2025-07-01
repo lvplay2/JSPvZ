@@ -5,7 +5,7 @@ oS.Init(
         PicArr: ["images/interface/background1.jpg", "images/interface/ZombieNoteSmall.png", "images/interface/ZombieNote1.png"],
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
-        LevelName: "关卡 1-9",
+        LevelName: "Level 1-9",
         LvlEName: 9,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
     },

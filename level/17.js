@@ -11,7 +11,7 @@ oS.Init(
         CanSelectCard: 1,
         DKind: 0,
         SunNum: 50,
-        LevelName: "关卡 2-7",
+        LevelName: "Level 2-7",
         LvlEName: 17,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag1") },
         Monitor: { f: AppearTombstones, ar: [5, 9, 11] },

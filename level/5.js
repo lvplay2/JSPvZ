@@ -9,7 +9,7 @@ oS.Init(
         })(),
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 0,
-        LevelName: "1-5 特别关：陨石坑",
+        LevelName: "Level 1-5",
         LvlClearFunc: function () {
             oSym.TimeStep = 10;
         },
@@ -29,16 +29,16 @@ oS.Init(
                             b = oS.Chose;
                         switch (c) {
                             case 0:
-                                innerText($("DivTeach"), "你必须清理一下你的草坪，用铲子挖出那些植物！");
+                                innerText($("DivTeach"), "Use your shovel and dig up those plants!");
                                 NewImg("PointerUD", "images/interface/PointerUP.gif", "top:36px;left:250px", EDAll);
                                 oSym.addTask(10, arguments.callee, [++c]);
                                 break;
                             case 1:
-                                b < 0 && (innerText($("DivTeach"), "点击移除一棵植物！"), ++c);
+                                b < 0 && (innerText($("DivTeach"), "Click on a plant to remove it!"), ++c);
                                 oSym.addTask(10, arguments.callee, [c]);
                                 break;
                             case 2:
-                                !(a["2_6_1"] && a["3_8_1"] && a["4_7_1"]) ? (innerText($("DivTeach"), "一直挖吧，挖到你的草坪上没有植物！"), ++c) : b > -1 && (innerText($("DivTeach"), "点击铲子挖出那些植物！"), (c = 1));
+                                !(a["2_6_1"] && a["3_8_1"] && a["4_7_1"]) ? (innerText($("DivTeach"), "Keep digging until your lawn is clear of plants!"), ++c) : b > -1 && (innerText($("DivTeach"), "Click on the shovel to pick it up!"), (c = 1));
                                 oSym.addTask(10, arguments.callee, [c]);
                                 break;
                             default:

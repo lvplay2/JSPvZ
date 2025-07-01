@@ -68,7 +68,7 @@ oS.Init({
             "images/Zombies/NewspaperZombie/1.gif",
         ];
     })(),
-    LevelName: "游戏初始界面",
+    LevelName: "Menu",
     LevelEName: 0,
     ShowScroll: 1,
     LoadMusic: "Faster",

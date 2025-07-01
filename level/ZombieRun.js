@@ -33,7 +33,7 @@ oS.Init(
         PicArr: ["images/interface/background1.jpg"],
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
-        LevelName: "小游戏：僵尸快跑!(IE6-8无加速)",
+        LevelName: "Zombies, Run! (No acceleration on IE6-8)",
         LvlEName: "ZombieRun",
         LvlClearFunc: function () {
             oSym.Clear();

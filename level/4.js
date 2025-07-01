@@ -5,7 +5,7 @@ oS.Init(
         PicArr: ["images/interface/background1unsodded2.jpg", "images/interface/background1.jpg"],
         backgroundImage: "images/interface/background1unsodded2.jpg",
         CanSelectCard: 0,
-        LevelName: "关卡 1-4",
+        LevelName: "Level 1-4",
         LvlEName: 4,
         AudioArr: ["dirt_rise"],
         LargeWaveFlag: { 9: $("imgFlag1") },
@@ -65,9 +65,9 @@ oS.Init(
                 SetHidden(EDAll, $("dFlagMeter"));
                 SetStyle($("imgSF"), { left: "351px", top: "131px", width: "152px", height: "68px", cursor: "default" }).onclick = null;
                 $("iNewPlantCard").src = "images/interface/Shovel.png";
-                innerText($("dNewPlantTitle"), "你获得了铲子！");
-                innerText($("dNewPlantName"), "铲子");
-                innerText($("dNewPlantTooltip"), "你可以使用铲子铲除掉草坪上的植物");
+                innerText($("dNewPlantTitle"), "You got the shovel!");
+                innerText($("dNewPlantName"), "Shovel");
+                innerText($("dNewPlantTooltip"), "Lets you dig up a plant to make room for another plant");
                 $("btnNextLevel").onclick = function () {
                     SelectModal(5);
                 };

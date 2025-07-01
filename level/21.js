@@ -12,7 +12,7 @@ oS.Init(
         LF: [0, 1, 1, 2, 2, 1, 1],
         backgroundImage: "images/interface/background3.jpg",
         CanSelectCard: 1,
-        LevelName: "关卡 3-1",
+        LevelName: "Level 3-1",
         LvlEName: 21,
         AudioArr: ["crazydaveshort2", "crazydavelong1", "crazydavelong2", "crazydavelong3"],
         LargeWaveFlag: { 10: $("imgFlag1") },
@@ -41,7 +41,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "看来僵尸们要放弃进攻你的前院了。(点击继续)");
+                        innerText(c, "Looks like the zombies gave up attacking your front yard. (Click to continue)");
                         break;
                     case 1:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -57,7 +57,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "现在他们想试试你的后院。(点击继续)");
+                        innerText(c, "Now they're trying your backyard. (Click to continue)");
                         break;
                     case 2:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -73,7 +73,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "但最重要的是你不能使用你的蘑菇了！(点击继续)");
+                        innerText(c, "And to top it all off, you can't even use your mushrooms! (Click to continue)");
                         break;
                     case 3:
                         PlayAudio("crazydaveshort2");
@@ -89,7 +89,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "因为他们白天时要睡觉！(点击继续)");
+                        innerText(c, "'cause they'll fall asleep during the day! (Click to continue)");
                         break;
                     case 4:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -105,7 +105,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "这难道不是花花公子的作风吗？(点击继续)");
+                        innerText(c, "Well isn't that just dandy! (Click to continue)");
                         break;
                     case 5:
                         $("dDave").src = "images/interface/Dave2.gif";

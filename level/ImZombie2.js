@@ -8,7 +8,7 @@ oS.Init({
     BrainsNum: 5,
     ProduceSun: false,
     CardKind: 1,
-    LevelName: "解谜模式：我也是僵尸！",
+    LevelName: "I, Zombie Too",
     LvlEName: "ImZombie2",
     LoadMusic: "Mountains",
     StartGameMusic: "Mountains",

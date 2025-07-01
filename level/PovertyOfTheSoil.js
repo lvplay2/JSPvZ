@@ -37,7 +37,7 @@ oS.Init(
         SunNum: 150,
         LF: [0, 0, 1, 1, 1, 0],
         ZF: [0, 1, 1, 1, 1, 1],
-        LevelName: "小游戏：贫瘠之地",
+        LevelName: "Poverty Of The Soil",
         LvlEName: "PovertyOfTheSoil",
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
     },

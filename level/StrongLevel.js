@@ -33,7 +33,7 @@ oS.Init(
         PicArr: ["images/interface/background1.jpg"],
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
-        LevelName: "小游戏：超乎寻常的压力!",
+        LevelName: "High Pressure",
         LvlEName: "StrongLevel",
         LargeWaveFlag: { 10: $("imgFlag1") },
         StartGameMusic: "Watery Graves",

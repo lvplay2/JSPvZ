@@ -55,7 +55,7 @@
             ProduceSun: false,
             CardKind: 1,
             DKind: 0,
-            LevelName: "解谜对战：" + (l || "[无标题游戏]"),
+            LevelName: "Puzzle Battle：" + (l || "[Untitled Level]"),
             LvlEName: "GetImZombieCreateGame",
             LoadMusic: "Mountains",
             StartGameMusic: "Mountains",
@@ -105,17 +105,17 @@
                             innerHTML:
                                 '<button class="jhp" style="width:140px;height:50px"><span>' +
                                 a +
-                                '</span><BR>灰常好,值得一玩</button><button class="jhp" style="width:140px;height:50px;margin-left:10px"><span>' +
+                                '</span><BR>Very good, worth playing</button><button class="jhp" style="width:140px;height:50px;margin-left:10px"><span>' +
                                 d +
-                                '</span><BR>还可以,中规中矩</button><button class="jhp" style="width:140px;height:50px;margin-left:10px"><span>' +
+                                '</span><BR>OK, not bad</button><button class="jhp" style="width:140px;height:50px;margin-left:10px"><span>' +
                                 h +
-                                "</span><BR>无聊死,给我消失</button>",
+                                "</span><BR>Bored to death, disappear</button>",
                         },
                         EDAll
                     );
                     var t = function (w) {
-                            if ($User.Visitor.UserName == "游客") {
-                                alert("注册用户方可投票");
+                            if ($User.Visitor.UserName == "Guest") {
+                                alert("Only registered users can vote!");
                                 return;
                             }
                             ClearChild($("JSPVZAjax"));
@@ -146,7 +146,7 @@
                     "button",
                     "position:absolute;left:650px;top:510px;width:100px;height:35px;z-index:255",
                     {
-                        innerHTML: "开始挑战",
+                        innerHTML: "Start the Challenge",
                         onclick: function () {
                             i(0);
                         },
@@ -158,7 +158,7 @@
                     "button",
                     "position:absolute;left:760px;top:510px;width:100px;height:35px;z-index:255",
                     {
-                        innerHTML: "不玩这个",
+                        innerHTML: "Don't Play This",
                         onclick: function () {
                             SelectModal(0);
                             HiddenOptions();
@@ -174,12 +174,12 @@
                         "button",
                         "position:absolute;left:650px;top:450px;width:100px;height:35px;z-index:255;color:blue;font-weight:bold",
                         {
-                            innerHTML: "删除本关",
+                            innerHTML: "Delete This Level",
                             onclick: function () {
-                                if (confirm("你确定要删除这个关卡？一旦删除无法恢复！")) {
+                                if (confirm("Are you sure you want to delete this level? Once deleted, it cannot be restored!")) {
                                     var t;
-                                    if ((t = prompt("输入删除的理由\n未输入则默认为空", "")) != null) {
-                                        $("dButton3").innerHTML = "正在删除";
+                                    if ((t = prompt("Enter the reason for deletion\nIf not entered, it will be left blank by default", "")) != null) {
+                                        $("dButton3").innerHTML = "Delete";
                                         $("dButton3").disabled = "disabled";
                                         $("dButton3").style.color = "gray";
                                         ClearChild($("JSPVZAjax"));

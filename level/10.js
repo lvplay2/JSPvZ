@@ -5,7 +5,7 @@ oS.Init(
         PicArr: ["images/interface/background1.jpg", "images/interface/trophy.png"],
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 0,
-        LevelName: "关卡 1-10",
+        LevelName: "Level 1-10",
         LvlEName: 10,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag1") },
         StaticCard: 0,

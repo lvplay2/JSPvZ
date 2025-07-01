@@ -7,7 +7,7 @@ oS.Init(
         LF: [0, 1, 1, 1, 1, 1],
         CanSelectCard: 0,
         DKind: 0,
-        LevelName: "小游戏:坚果保龄球",
+        LevelName: "Wall-nut Bowling",
         LvlEName: "NutBowling",
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag1") },
         StaticCard: 0,
@@ -120,7 +120,7 @@ oS.Init(
             var j = $("DivTeach");
             j && j.parentNode.removeChild(j);
             if (c > 347) {
-                innerText(NewEle("DivTeach", "div", "line-height:40px;font-size: 14px", 0, EDAll), "在红线的左边才能放坚果！");
+                innerText(NewEle("DivTeach", "div", "line-height:40px;font-size: 14px", 0, EDAll), "Place your wall-nut to the left of the bowling line");
                 return false;
             }
             var i = oS.ChoseCard,

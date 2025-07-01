@@ -20,7 +20,7 @@ oS.Init(
         CanSelectCard: 1,
         DKind: 0,
         SunNum: 50,
-        LevelName: "关卡 2-1",
+        LevelName: "Level 2-1",
         LvlEName: 11,
         AudioArr: ["crazydaveshort1", "crazydavelong1", "crazydavelong2", "crazydavelong3"],
         LargeWaveFlag: { 10: $("imgFlag1") },
@@ -49,7 +49,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "晚上好，" + $User.Visitor.UserName + "。(点击继续)");
+                        innerText(c, "Evening, " + $User.Visitor.UserName + ". (Click to continue)");
                         break;
                     case 1:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -65,7 +65,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "那些僵尸不会减弱攻势吧？(点击继续)");
+                        innerText(c, "Those zombies just won't let up, will they? (Click to continue)");
                         break;
                     case 2:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -81,7 +81,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "你会注意到和僵尸作战在夜间不同于白天之处。(点击继续)");
+                        innerText(c, "You'll notice that fighting zombies at night is different than in the day. (Click to continue)");
                         break;
                     case 3:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -97,7 +97,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "首先，你不能从天上得到阳光。(点击继续)");
+                        innerText(c, "For one, you won't get any sun falling from the sky. (Click to continue)");
                         break;
                     case 4:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -113,7 +113,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "但你仍可以通过向日葵来获得阳光。(点击继续)");
+                        innerText(c, "You can still get sun from sunflowers, though. (Click to continue)");
                         break;
                     case 5:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -129,7 +129,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "而且你很幸运，你得到了小喷菇。(点击继续)");
+                        innerText(c, "And lucky for you, you got yourself some puff-shrooms. (Click to continue)");
                         break;
                     case 6:
                         PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -145,7 +145,7 @@ oS.Init(
                             },
                             []
                         );
-                        innerText(c, "尽可能多地种植这些蘑菇吧，你会挺过去的。(点击继续)");
+                        innerText(c, "Plant as many of those as you can and you'll be A-O-GOOD. (Click to continue)");
                         break;
                     case 7:
                         $("dDave").src = "images/interface/Dave2.gif";

@@ -33,7 +33,7 @@ oS.Init(
         LF: [0, 1, 1, 2, 2, 1, 1],
         backgroundImage: "images/interface/background3.jpg",
         CanSelectCard: 1,
-        LevelName: "关卡 3-4",
+        LevelName: "Level 3-4",
         LvlEName: 24,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
         UserDefinedFlagFunc: function (a) {

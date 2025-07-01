@@ -11,7 +11,7 @@ oS.Init(
         CanSelectCard: 1,
         DKind: 0,
         SunNum: 100,
-        LevelName: "小游戏：乱葬岗",
+        LevelName: "Mass Grave",
         LvlEName: "MassGrave",
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
         Monitor: { f: AppearTombstones, ar: [5, 9, 12] },

@@ -10,7 +10,7 @@ oS.Init(
         backgroundImage: "images/interface/background1unsodded_1.jpg",
         LF: [0, 0, 1, 1, 1, 0],
         CanSelectCard: 0,
-        LevelName: "关卡 1-2",
+        LevelName: "Level 1-2",
         LvlEName: 2,
         AudioArr: ["dirt_rise"],
         LargeWaveFlag: { 6: $("imgFlag1") },
@@ -53,7 +53,7 @@ oS.Init(
                                       var m = oS.C + 1;
                                       switch (l) {
                                           case 0:
-                                              innerText($("DivTeach"), "向日葵是极其重要的植物，一般种在最左边");
+                                              innerText($("DivTeach"), "Sunflowers are an extremely important plant!");
                                               NewImg("PointerUD", "images/interface/PointerUP.gif", "top:120px;left:50px", EDAll);
                                               oSym.addTask(10, arguments.callee, [++l]);
                                               break;
@@ -62,7 +62,7 @@ oS.Init(
                                                   i;
                                               for (i in j) {
                                                   if (j[i].EName == "oSunFlower") {
-                                                      innerText($("DivTeach"), "请至少种下三棵向日葵！");
+                                                      innerText($("DivTeach"), "Planting at least 3 sunflowers improves your chances of surviving a zombie attack!");
                                                       oSym.addTask(10, arguments.callee, [++l]).addTask(
                                                           2500,
                                                           function () {
@@ -83,7 +83,7 @@ oS.Init(
                                               for (i in j) {
                                                   j[i].EName == "oSunFlower" && ++k;
                                               }
-                                              k > 1 && (innerText($("DivTeach"), "向日葵越多，你获得阳光的速度就越快！"), ++l);
+                                              k > 1 && (innerText($("DivTeach"), "The more sunflowers you have, the faster you can grow plants!"), ++l);
                                               oSym.addTask(10, arguments.callee, [l]);
                                               break;
                                           default:
@@ -94,7 +94,7 @@ oS.Init(
                                                   j[i].EName == "oSunFlower" && ++k;
                                               }
                                               k > 2
-                                                  ? (innerText($("DivTeach"), "现在用你获得的阳光种植其它的植物！"), SetStyle($("PointerUD"), { left: "50px", top: "60px" }), oSym.addTask(500, SetNone, [$("PointerUD"), $("DivTeach")]))
+                                                  ? (innerText($("DivTeach"), "Now use the sun you gained to grow other plants!"), SetStyle($("PointerUD"), { left: "50px", top: "60px" }), oSym.addTask(500, SetNone, [$("PointerUD"), $("DivTeach")]))
                                                   : oSym.addTask(10, arguments.callee, [3]);
                                       }
                                       return l;

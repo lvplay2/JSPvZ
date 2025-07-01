@@ -11,7 +11,7 @@ oS.Init(
         backgroundImage: "images/interface/background1unsodded.jpg",
         LF: [0, 0, 0, 1, 0, 0],
         CanSelectCard: 0,
-        LevelName: "关卡 1-1",
+        LevelName: "Level 1-1 (Tutorial)",
         LvlEName: 1,
         AudioArr: ["dirt_rise"],
         InitLawnMower: function () {
@@ -45,12 +45,12 @@ oS.Init(
                                       i = oS.Chose;
                                   switch (k) {
                                       case 0:
-                                          innerText($("DivTeach"), "点击卡片选择豌豆射手！");
+                                          innerText($("DivTeach"), "Click on a seed packet to pick it up!");
                                           NewImg("PointerUD", "images/interface/PointerUP.gif", "top:60px;left:50px", EDAll);
                                           oSym.addTask(10, arguments.callee, [++k]);
                                           break;
                                       case 1:
-                                          i > 0 && (innerText($("DivTeach"), "点击草地种下豌豆射手，最好种在靠左边！"), EditImg($("PointerUD"), "", "images/interface/PointerDown.gif", { left: "170px", top: "270px" }), ++k);
+                                          i > 0 && (innerText($("DivTeach"), "Click on the grass to plant your seed!"), EditImg($("PointerUD"), "", "images/interface/PointerDown.gif", { left: "170px", top: "270px" }), ++k);
                                           oSym.addTask(10, arguments.callee, [k]);
                                           break;
                                       case 2:
@@ -58,7 +58,7 @@ oS.Init(
                                           while (--l) {
                                               if (h["3_" + l + "_1"]) {
                                                   SetHidden($("PointerUD"));
-                                                  innerText($("DivTeach"), "你拥有了第一个植物，点击收集掉落的阳光！");
+                                                  innerText($("DivTeach"), "Click on the falling sun to collect it!");
                                                   AutoProduceSun(25);
                                                   oSym.addTask(10, arguments.callee, [++k]);
                                                   return;
@@ -69,7 +69,8 @@ oS.Init(
                                           break;
                                       case 3:
                                           oS.SunNum > 99 &&
-                                              (innerText($("DivTeach"), "你拥有了足够的阳光来种植另一个豌豆射手！"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
+                                              (innerText($("DivTeach"), "Excellent! You\'ve collected
+enough sun for your next plant!"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
                                           oSym.addTask(10, arguments.callee, [k]);
                                           break;
                                       default:
@@ -78,7 +79,7 @@ oS.Init(
                                           while (--l) {
                                               h["3_" + l + "_1"] && ++j;
                                           }
-                                          j > 0 ? (SetHidden($("PointerUD")), innerText($("DivTeach"), "别让僵尸靠近你的房子！"), oP.AddZombiesFlag(), oSym.addTask(500, SetNone, [$("DivTeach")])) : oSym.addTask(10, arguments.callee, [4]);
+                                          j > 0 ? (SetHidden($("PointerUD")), innerText($("DivTeach"), "Don\'t let the zombies reach your house!"), oP.AddZombiesFlag(), oSym.addTask(500, SetNone, [$("DivTeach")])) : oSym.addTask(10, arguments.callee, [4]);
                                   }
                               },
                           });

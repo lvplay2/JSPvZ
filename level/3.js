@@ -10,7 +10,7 @@ oS.Init(
         backgroundImage: "images/interface/background1unsodded2.jpg",
         LF: [0, 0, 1, 1, 1, 0],
         CanSelectCard: 0,
-        LevelName: "关卡 1-3",
+        LevelName: "Level 1-3",
         LvlEName: 3,
         LargeWaveFlag: { 8: $("imgFlag1") },
         InitLawnMower: function () {

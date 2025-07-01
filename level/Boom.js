@@ -6,7 +6,7 @@ oS.Init(
         backgroundImage: "images/interface/background2.jpg",
         CanSelectCard: 0,
         DKind: 0,
-        LevelName: "小游戏:核爆!",
+        LevelName: "Boom!",
         LvlEName: "Boom",
         LvlClearFunc: function () {
             oSym.TimeStep = 10;

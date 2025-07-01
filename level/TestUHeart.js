@@ -6,7 +6,7 @@ oS.Init(
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 0,
         SunNum: 100,
-        LevelName: "小游戏：你的心脏够强劲吗？",
+        LevelName: "Test Your Heart",
         LvlEName: "TestUHeart",
         LargeWaveFlag: { 1: $("imgFlag1") },
         StartGameMusic: "Watery Graves",
@@ -17,10 +17,10 @@ oS.Init(
             NewEle("btnClick1", "span", "cursor:pointer;position:absolute;left:620px;height:40px;width:40px;text-align:center;line-height:40px;font-family: 幼圆; font-size: 14px;color:#FFF;border:1px solid #888;background:#000", 0, a);
             NewEle("btnClick2", "span", "cursor:pointer;position:absolute;left:670px;height:40px;width:60px;text-align:center;line-height:40px;font-family: 幼圆; font-size: 14px;color:#FFF;border:1px solid #888;background:#000", 0, a);
             NewEle("btnClick3", "span", "cursor:pointer;position:absolute;left:740px;height:40px;width:140px;text-align:center;line-height:40px;font-family: 幼圆; font-size: 14px;color:#FFF;border:1px solid #888;background:#000", 0, a);
-            innerText($("spanT"), "测试一下CPU和浏览器是否强劲(IE9以下勿试5000个)？打开任务管理器，点击开始吧！");
+            innerText($("spanT"), "Test whether the CPU and browser are powerful. Open Task Manager and click Start!");
             innerText($("btnClick1"), "100");
             innerText($("btnClick2"), "1000");
-            innerText($("btnClick3"), "翠花,上5000个!!");
+            innerText($("btnClick3"), "Give me 5000!!");
             CustomPlants(0, 2, 5);
             CustomPlants(0, 3, 9);
             CustomPlants(0, 4, 1);
@@ -41,17 +41,17 @@ oS.Init(
                         };
                     $("btnClick1").onclick = function () {
                         oP.FlagToSumNum.a2 = [100];
-                        innerText($("DivTeach"), "下面有请我们的100个僵尸客串演员出场！");
+                        innerText($("DivTeach"), "Time to unleash our 100 guest zombie performers!");
                         b();
                     };
                     $("btnClick2").onclick = function () {
                         oP.FlagToSumNum.a2 = [1000];
-                        innerText($("DivTeach"), "下面有请我们的1000个僵尸客串演员出场！");
+                        innerText($("DivTeach"), "And now... please welcome our 1,000 zombie guest stars!");
                         b();
                     };
                     $("btnClick3").onclick = function () {
                         oP.FlagToSumNum.a2 = [5000];
-                        innerText($("DivTeach"), "有请5000个客串演员出场！！或许他们化妆需要一点时间，请耐心等待。。。");
+                        innerText($("DivTeach"), "Here come 5,000 guest stars!! They might need a little time to get their makeup done, so hang tight...");
                         b();
                     };
                     (c.IE9 || !c.IE) &&

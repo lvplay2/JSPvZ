@@ -8,7 +8,7 @@ oS.Init({
     BrainsNum: 5,
     ProduceSun: false,
     CardKind: 1,
-    LevelName: "解谜模式：我是僵尸！",
+    LevelName: "I, Zombie",
     LvlEName: "ImZombie1",
     AudioArr: ["crazydaveshort1", "crazydavelong1", "crazydavelong2", "crazydavelong3"],
     LoadMusic: "Mountains",
@@ -60,7 +60,7 @@ oS.Init({
                         },
                         []
                     );
-                    innerText(c, "僵尸们想要我帮他们练习入侵房子(点击继续)");
+                    innerText(c, "The zombies asked me to help them practice invading houses. (Click to continue)");
                     break;
                 case 1:
                     PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -76,7 +76,7 @@ oS.Init({
                         },
                         []
                     );
-                    innerText(c, "我告诉他们只要植物不被破坏就没问题(点击继续)");
+                    innerText(c, "I told them it'd be okay as long as no plants were harmed. (Click to continue)");
                     break;
                 case 2:
                     PlayAudio("crazydavelong" + Math.floor(1 + Math.random() * 3));
@@ -92,7 +92,7 @@ oS.Init({
                         },
                         []
                     );
-                    innerText(c, "所以我用硬纸板把你的草坪隔开了(点击继续)");
+                    innerText(c, "So, I put a bunch of cardboard cut-outs on your lawn. (Click to continue)");
                     break;
                 case 3:
                     PlayAudio("crazydaveshort1");
@@ -108,7 +108,7 @@ oS.Init({
                         },
                         []
                     );
-                    innerText(c, "祝你玩得愉快！(点击继续)");
+                    innerText(c, "Have fun! (Click to continue)");
                     break;
                 case 4:
                     c.onclick = null;
@@ -123,7 +123,7 @@ oS.Init({
                     );
                     break;
                 case 5:
-                    innerText(c, "通过这关需要吃掉所有的大脑！");
+                    innerText(c, "Eat all the brains to pass the level!");
                     oSym.addTask(
                         500,
                         function () {

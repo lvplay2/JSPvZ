@@ -6,7 +6,7 @@ oS.Init(
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 1,
         SunNum: 175,
-        LevelName: "小游戏：我心飞翔",
+        LevelName: "Flight Of Fancy",
         LvlEName: "FlightOfFancy",
         LargeWaveFlag: { 10: $("imgFlag1") },
         StartGameMusic: "Ultimate battle",

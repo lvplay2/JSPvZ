@@ -9,7 +9,7 @@ oS.Init(
         BrainsNum: 5,
         ProduceSun: false,
         CardKind: 1,
-        LevelName: "解谜模式：僵尸摇摆",
+        LevelName: "ZomBoogie",
         LvlEName: "ImZombie7",
         LoadMusic: "Mountains",
         StartGameMusic: "Mountains",

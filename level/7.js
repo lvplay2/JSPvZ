@@ -9,7 +9,7 @@ oS.Init(
         })(),
         backgroundImage: "images/interface/background1.jpg",
         CanSelectCard: 0,
-        LevelName: "关卡 1-7",
+        LevelName: "Level 1-7",
         LvlEName: 7,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag1") },
     },
