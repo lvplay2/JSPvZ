@@ -69,7 +69,7 @@ oS.Init(
                                           break;
                                       case 3:
                                           oS.SunNum > 99 &&
-                                              (innerText($("DivTeach"), ("Excellent! You've collected enough sun for your next plant!"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
+                                              (innerText($("DivTeach"), "Excellent! You've collected enough sun for your next plant!"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
                                           oSym.addTask(10, arguments.callee, [k]);
                                           break;
                                       default:
@@ -78,7 +78,7 @@ oS.Init(
                                           while (--l) {
                                               h["3_" + l + "_1"] && ++j;
                                           }
-                                          j > 0 ? (SetHidden($("PointerUD")), innerText($("DivTeach"), "Don\'t let the zombies reach your house!"), oP.AddZombiesFlag(), oSym.addTask(500, SetNone, [$("DivTeach")])) : oSym.addTask(10, arguments.callee, [4]);
+                                          j > 0 ? (SetHidden($("PointerUD")), innerText($("DivTeach"), "Don't let the zombies reach your house!"), oP.AddZombiesFlag(), oSym.addTask(500, SetNone, [$("DivTeach")])) : oSym.addTask(10, arguments.callee, [4]);
                                   }
                               },
                           });
