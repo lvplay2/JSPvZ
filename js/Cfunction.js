@@ -2058,7 +2058,7 @@ var $User = (function () {
         document.cookie = a + "=0;";
     },
     WordUTF8 =
-        '<div id="dLogo" style="position:absolute;width:900px;height:600px;z-index:1"><div id="LogoWord" style="position:absolute;color:#FF0;top:300px;width:100%;height:100px"><span style="position:absolute;width:155px;height:94px;left:275px;top:5px;cursor:pointer" onclick="PlayAudio(\'gravebutton\');SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'));ShowNameDiv()"></span><div style="position:absolute;font-size:14px;left:660px;text-align:center;width:140px;top:185px;line-height:1.5;font-weight:bold"><span style="cursor:pointer"><span id="sTime" style="cursor:pointer">(v12.08.15.1500)</span></span></div></div><div style="position:absolute;width:155px;height:110px;left:650px;top:440px;cursor:pointer;z-index:300" onclick="SetVisible($(\'dProcess\'))"></div><img src="images/interface/bengji.gif" style="position:absolute;left:550px;top:-40px"></div>',
+        '<div id="dLogo" style="position:absolute;width:800px;height:600px;z-index:1"><div id="LogoWord" style="position:absolute;color:#FF0;top:500px;width:100%;height:100px"><span style="position:absolute;width:321px;height:53px;left:275px;top:5px;cursor:pointer" onclick="PlayAudio(\'gravebutton\');SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'));ShowNameDiv()"></span><div style="position:absolute;font-size:14px;left:660px;text-align:center;width:140px;top:185px;line-height:1.5;font-weight:bold"><span style="cursor:pointer"></span></div></div></div>',
     ShowNameDiv = function () {
         oSym.Start();
         (function (c) {
@@ -2175,7 +2175,7 @@ var $User = (function () {
         LoadLvl(g);
     },
     InitGame = function () {
-        var e = NewEle("dServer", "div", "position:absolute;line-height:28px;left:706px;top:245px;width:700px;height:100px;font-size:16px;color:#040;font-family:SimHei;font-weight:bold;z-index:2;display:none", 0, $("dAll")),
+        var e = NewEle("dServer", "div", "", 0, $("dAll")),
             c = $User.Server,
             b = c.List,
             a = $("dProcess2");
