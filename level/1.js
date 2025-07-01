@@ -69,8 +69,7 @@ oS.Init(
                                           break;
                                       case 3:
                                           oS.SunNum > 99 &&
-                                              (innerText($("DivTeach"), "Excellent! You\'ve collected
-enough sun for your next plant!"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
+                                              (innerText($("DivTeach"), ("Excellent! You've collected enough sun for your next plant!"), EditImg($("PointerUD"), "", "images/interface/PointerUP.gif", { left: "50px", top: "60px", visibility: "visible" }), ++k);
                                           oSym.addTask(10, arguments.callee, [k]);
                                           break;
                                       default:
