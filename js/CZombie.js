@@ -523,7 +523,7 @@ var CZombies = (function (b, a) {
     })(),
     oBackupDancer = InheritO(OrnNoneZombies, {
         EName: "oBackupDancer",
-        CName: "伴舞僵尸",
+        CName: "Backup Dancer",
         OSpeed: 3.5,
         Speed: 3.5,
         Lvl: 1,
@@ -624,7 +624,7 @@ var CZombies = (function (b, a) {
             (e.delayT = a) && (e.FreeSetbodyTime = oSym.Now);
             return e.getHTML((e.id = b), e.X, (e.pixelTop = f), (e.zIndex = 3 * g + 1), "none", j || 0, e.height + "px", e.PicArr[e.StandGif]);
         },
-        Produce: '当舞王僵尸摇摆时，这种僵尸四个结伙出现。</p><p>韧性：<font color="#FF0000">低</font><br>伴舞僵尸曾在位于僵尸纽约城的“咀利牙”表演艺术学院钻研过六年的舞技。',
+        Produce: 'These zombies appear in sets of four whenever Dancing Zombie rocks out.</p><p>Toughness： <font color="#FF0000">low</font><br>Backup Dancer Zombie spent six years perfecting his art at the Chewliard Performing Arts School in Zombie New York City.',
         BirthCallBack: function (e) {
             var d = e.delayT,
                 c = e.id,
@@ -709,7 +709,7 @@ var CZombies = (function (b, a) {
     }),
     oDancingZombie = InheritO(OrnNoneZombies, {
         EName: "oDancingZombie",
-        CName: "舞王僵尸",
+        CName: "Dancing Zombie",
         HP: 500,
         BreakPoint: 166,
         Lvl: 3,
@@ -776,7 +776,7 @@ var CZombies = (function (b, a) {
                 b,
             ];
         })(),
-        Produce: '舞王僵尸和人类(在世或者死去的)如有雷同，纯属巧合。</p><p>韧性：<font color="#FF0000">中</font><br>特点：<font color="#FF0000">召唤伴舞僵尸</font></p>舞王僵尸的最新唱片“抓住脑子啃啊啃”在僵尸界的人气正急速飙升。',
+        Produce: 'Any resemblance between Dancing Zombie and persons living or dead is purely coincidental.</p><p>Toughness： <font color="#FF0000">medium</font><br>Special： <font color="#FF0000">summons back-up dancers</font></p>Dancing Zombie\'s latest album, "GrarrBRAINSarblarbl," is already rocketing up the undead charts.',
         getSnowPea: function () {
             Z.PlaySlowballAudio();
         },
@@ -1244,7 +1244,7 @@ var CZombies = (function (b, a) {
     }),
     oZombie = InheritO(OrnNoneZombies, {
         EName: "oZombie",
-        CName: "领带僵尸",
+        CName: "Zombie",
         StandGif: 9,
         PicArr: (function () {
             var a = "images/Zombies/Zombie/";
@@ -1261,7 +1261,7 @@ var CZombies = (function (b, a) {
                 a + "1.gif",
             ];
         })(),
-        Produce: '韧性：<font color="#FF0000">低</font></p>这种僵尸喜爱脑髓，贪婪而不知足。脑髓，脑髓，脑髓，夜以继日地追求着。老而臭的脑髓？腐烂的脑髓？都没关系。僵尸需要它们。',
+        Produce: 'Toughness： <font color="#FF0000">low</font></p>This zombie loves brains. Can\'t get enough. Brains, brains, brains, day in and night out. Old and stinky brains? Rotten brains? Brains clearly past their prime? Doesn\'t matter. Regular zombie wants \'em.',
     }),
     oZombie2 = InheritO(oZombie, { EName: "oZombie2" }, { PicArr: { 2: "images/Zombies/Zombie/Zombie2.gif", 9: "images/Zombies/Zombie/2.gif" } }),
     oZombie3 = InheritO(oZombie, { EName: "oZombie3" }, { PicArr: { 2: "images/Zombies/Zombie/Zombie3.gif", 9: "images/Zombies/Zombie/3.gif" } }),
@@ -1282,11 +1282,11 @@ var CZombies = (function (b, a) {
             ];
         })(),
         EName: "oFlagZombie",
-        CName: "旗帜僵尸",
+        CName: "Flag Zombie",
         OSpeed: 2.2,
         Speed: 2.2,
         beAttackedPointR: 101,
-        Produce: '旗帜僵尸标志着即将来袭的一大堆僵尸"流"。<p>韧性：<font color="#FF0000">低</font></p>毫无疑问，摇旗僵尸喜爱脑髓。但在私下里他也迷恋旗帜。也许是因为旗帜上也画有脑子吧，这很难说。',
+        Produce: 'Flag Zombie marks the arrival of a huge pile or "wave" of zombies.<p>Toughness： <font color="#FF0000">low</font></p>Make no mistake, Flag Zombie loves brains. But somewhere down the line he also picked up a fascination with flags. Maybe it\'s because the flags always have brains on them. Hard to say.',
     }),
     OrnIZombies = (function () {
         var a = function (f, b) {
@@ -1314,7 +1314,7 @@ var CZombies = (function (b, a) {
     })(),
     oConeheadZombie = InheritO(OrnIZombies, {
         EName: "oConeheadZombie",
-        CName: "路障僵尸",
+        CName: "Conehead Zombie",
         OrnHP: 370,
         Lvl: 2,
         SunNum: 75,
@@ -1341,13 +1341,13 @@ var CZombies = (function (b, a) {
         PlayNormalballAudio: function () {
             PlayAudio("plastichit");
         },
-        Produce: '他的路障头盔，使他两倍坚韧于普通僵尸。<p>韧性：<font color="#FF0000">中</font></p>和其他僵尸一样，路障头僵尸盲目地向前。但某些事物却使他停下脚步，捡起一个交通路障，并固实在自己的脑袋上。是的，他很喜欢参加聚会。',
+        Produce: 'His traffic cone headpiece makes him twice as tough as normal zombies.<p>Toughness： <font color="#FF0000">medium</font></p>Conehead Zombie shuffled mindlessly forward like every other zombie. But something made him stop, made him pick up a traffic cone and stick it on his head. Oh yeah. He likes to party.',
     }),
     oBucketheadZombie = InheritO(
         oConeheadZombie,
         {
             EName: "oBucketheadZombie",
-            CName: "铁桶僵尸",
+            CName: "Buckethead Zombie",
             OrnHP: 1100,
             Lvl: 3,
             SunNum: 125,
@@ -1355,7 +1355,7 @@ var CZombies = (function (b, a) {
                 PlayAudio(["shieldhit", "shieldhit2"][Math.floor(Math.random() * 2)]);
             },
             Produce:
-                '他的铁桶头盔，能极大程度的承受伤害。<p>韧性：<font color="#FF0000">高</font><br>弱点：<font color="#FF0000">磁力菇</font></p>铁桶头僵尸经常戴着水桶，在冷漠的世界里显得独一无二。但事实上，他只是忘记了，那铁桶还在他头上而已。',
+                'His bucket hat makes him extremely resistant to damage.<p>Toughness： <font color="#FF0000">high</font><br>Weakness： <font color="#FF0000">magnet-shroom</font></p>Buckethead Zombie always wore a bucket. Part of it was to assert his uniqueness in an uncaring world. Mostly he just forgot it was there in the first place.',
         },
         {
             PicArr: {
@@ -1370,7 +1370,7 @@ var CZombies = (function (b, a) {
     ),
     oFootballZombie = InheritO(oConeheadZombie, {
         EName: "oFootballZombie",
-        CName: "橄榄球僵尸",
+        CName: "Football Zombie",
         OrnHP: 1400,
         Lvl: 3,
         SunNum: 175,
@@ -1405,11 +1405,11 @@ var CZombies = (function (b, a) {
             return "left:" + (a.beAttackedPointL + 15) + "px;top:" + (a.height - 22) + "px";
         },
         Produce:
-            '橄榄球僵尸的表演秀。<p>韧性：<font color="#FF0000">极高</font><br>速度：<font color="#FF0000">快</font><br>弱点：<font color="#FF0000">磁力菇</font></p>在球场上，橄榄球僵尸表现出110%的激情，他进攻防守样样在行。虽然他完全不知道橄榄球是什么。',
+            'Football Zombie makes the big plays.<p>Toughness: <font color="#FF0000">very high</font><br>Speed: <font color="#FF0000">fast</font><br>Weakness： <font color="#FF0000">magnet-shroom</font></p>Football Zombie is a team player who delivers both offensively and defensively. He has no idea what a football is.',
     }),
     oPoleVaultingZombie = InheritO(OrnNoneZombies, {
         EName: "oPoleVaultingZombie",
-        CName: "撑杆僵尸",
+        CName: "Pole Vaulting Zombie",
         HP: 500,
         width: 348,
         height: 218,
@@ -1447,7 +1447,7 @@ var CZombies = (function (b, a) {
         })(),
         AudioArr: ["polevault", "grassstep"],
         Produce:
-            '撑杆僵尸运用标杆高高地跃过障碍物。<p>韧性：<font color="#FF0000">中</font><Br>速度：<font color="#FF0000">快,而后慢(跳跃后)</font><BR>特点：<font color="#FF0000">跃过他所碰到的第一筑植物</font></p>一些僵尸渴望走得更远、得到更多，这也促使他们由普通成为非凡。那就是撑杆僵尸。',
+            'Pole Vaulting Zombie vaults with a pole.<p>Toughness： <font color="#FF0000">medium</font><Br>Speed： <font color="#FF0000">fast, then normal (after jump)</font><BR>Special： <font color="#FF0000">jumps the first plant he runs into</font></p>Some zombies take it further, aspire more, push themselves beyond the normal into greatness. That\'s Pole Vaulting Zombie right there. That is so him.',
         getShadow: function (a) {
             return "left:" + (a.beAttackedPointL - 20) + "px;top:" + (a.height - 35) + "px";
         },
@@ -1583,7 +1583,7 @@ var CZombies = (function (b, a) {
     }),
     oNewspaperZombie = InheritO(OrnIIZombies, {
         EName: "oNewspaperZombie",
-        CName: "读报僵尸",
+        CName: "Newspaper Zombie",
         OrnHP: 150,
         Lvl: 2,
         LostPaperGif: 13,
@@ -1614,7 +1614,7 @@ var CZombies = (function (b, a) {
             ];
         })(),
         AudioArr: ["newspaper_rarrgh2"],
-        Produce: '他的报纸只能提供有限的防御。<p>韧性：<font color="#FF0000">低</font><br>报纸韧性：<font color="#FF0000">低</font><br>速度：正常，而后快(失去报纸后)</p>读报僵尸，他正痴迷于完成他的数独难题。难怪他这么反常。',
+        Produce: 'His newspaper provides limited defense.<p>Toughness： <font color="#FF0000">low</font><br>Newspaper Toughness： <font color="#FF0000">low</font><br>Speed： normal, then fast (after losing newspaper)</p>Newspaper Zombie was *this* close to finishing his sudoku puzzle. No wonder he\'s freaking out.',
         getShadow: function (a) {
             return "left:75px;top:" + (a.height - 25) + "px";
         },
@@ -1802,7 +1802,7 @@ var CZombies = (function (b, a) {
     }),
     oScreenDoorZombie = InheritO(oNewspaperZombie, {
         EName: "oScreenDoorZombie",
-        CName: "铁栅门僵尸",
+        CName: "Screen Door Zombie",
         OrnHP: 1100,
         Lvl: 3,
         SunNum: 100,
@@ -1834,7 +1834,7 @@ var CZombies = (function (b, a) {
         PlayNormalballAudio: function () {
             PlayAudio("splat" + Math.floor(1 + Math.random() * 3));
         },
-        Produce: '他的铁栅门是有效的盾牌。<p>韧性：<font color="#FF0000">低</font><br>铁栅门韧性：<font color="#FF0000">高</font><br>弱点：大喷菇和磁力菇</p>门板僵尸上次拜访过的房主防守并不专业，在吃掉房主的脑子后拿走了他家的铁栅门。',
+        Produce: 'His screen door is an effective shield.<p>Toughness： <font color="#FF0000">low</font><br>Screen Door Toughness： <font color="#FF0000">high</font><br>Weakness： fume-shroom and magnet-shroom</p>He got his screen door from the last inexpertly defended home he visited, after he ATE THE HOMEOWNER\'S BRAINS.',
         GoingDie: CZombies.prototype.GoingDie,
         getFirePea: function (c, a, b) {
             PlayAudio(b == c.WalkDirection ? ["shieldhit", "shieldhit2"][Math.floor(Math.random() * 2)] : "splat" + Math.floor(1 + Math.random() * 3));
@@ -2061,13 +2061,13 @@ var CZombies = (function (b, a) {
     }),
     oDuckyTubeZombie1 = InheritO(oAquaticZombie, {
         EName: "oDuckyTubeZombie1",
-        CName: "鸭子救生圈僵尸",
+        CName: "Ducky Tube Zombie",
         beAttackedPointR: 130,
         GetDY: function () {
             return 5;
         },
         Produce:
-            '鸭子救生圈能让僵尸能浮在水面上。<p>韧性：<font color="#FF0000">低</font><br>只在水池关卡出现</font></p>只有特定的僵尸才能成为救生圈僵尸。并不是每个僵尸都能胜任的。有些救生圈有点漏气，但他们没能注意到，所以他们离开并放弃了对脑子的渴求。',
+            'The ducky tube allows this zombie to float on water.<p>Toughness： <font color="#FF0000">low</font><br>Only appears in the pool</font></p>It takes a certain kind of zombie to be a Ducky Tuber. Not every zombie can handle it.',
         PicArr: (function () {
             var a = "images/Zombies/DuckyTubeZombie1/";
             return ["images/Card/Zombies/DuckyTubeZombie1.png", a + "0.gif", a + "Walk1.gif", a + "Walk2.gif", a + "1.gif", a + "Attack.gif", "images/Zombies/Zombie/ZombieHead.gif" + $Random, a + "Die.gif" + $Random];
@@ -2140,7 +2140,7 @@ var CZombies = (function (b, a) {
     }),
     oSnorkelZombie = InheritO(oDuckyTubeZombie1, {
         EName: "oSnorkelZombie",
-        CName: "潜水僵尸",
+        CName: "Snorkel Zombie",
         Lvl: 1,
         SunNum: 75,
         width: 143,
@@ -2151,7 +2151,7 @@ var CZombies = (function (b, a) {
         Speed: 3.2,
         Altitude: 1,
         Produce:
-            '潜水僵尸可以在水下前行。<p>韧性：<font color="#FF0000">低</font><br>特点：<font color="#FF0000">潜泳以避免遭到攻击<br>只在水池关卡出现</font></p>僵尸不呼吸。他们不需要空气。那么为什么潜水僵尸需要一套潜水装置来潜水呢？<br>答案：同行的压力。',
+            'Snorkel zombies can swim underwater.<p>Toughness： <font color="#FF0000">low</font><br>Special： <font color="#FF0000">submerges to avoid attacks<br>Only appears in the pool</font></p>Zombies don\'t breathe. They don\'t need air. So why does Snorkel Zombie need a snorkel to swim underwater?<br>Answer: peer pressure.',
         JumpTime: 40,
         getShadow: function (a) {
             return "left:" + a.beAttackedPointL + "px;top:" + (a.height - 45) + "px";
@@ -2337,7 +2337,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallZombie = InheritO(oZombie, {
         EName: "oSmallZombie",
-        CName: "小领带僵尸",
+        CName: "Small Zombie",
         HP: 67,
         width: 83,
         height: 72,
@@ -2374,7 +2374,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallFlagZombie = InheritO(oFlagZombie, {
         EName: "oSmallFlagZombie",
-        CName: "小旗帜僵尸",
+        CName: "Small Flag Zombie",
         HP: 67,
         width: 83,
         height: 72,
@@ -2411,7 +2411,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallDuckyTubeZombie1 = InheritO(oDuckyTubeZombie1, {
         EName: "oSmallDuckyTubeZombie1",
-        CName: "小鸭子救生圈僵尸",
+        CName: "Small Ducky Tube Zombie 1",
         HP: 67,
         width: 83,
         height: 72,
@@ -2448,7 +2448,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallConeheadZombie = InheritO(oConeheadZombie, {
         EName: "oSmallConeheadZombie",
-        CName: "小路障僵尸",
+        CName: "Small Conehead Zombie",
         OrnHP: 92,
         HP: 67,
         width: 83,
@@ -2486,7 +2486,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallFootballZombie = InheritO(oFootballZombie, {
         EName: "oSmallFootballZombie",
-        CName: "小橄榄球僵尸",
+        CName: "Small Football Zombie",
         OrnHP: 350,
         HP: 67,
         width: 77,
@@ -2524,7 +2524,7 @@ var CZombies = (function (b, a) {
     }),
     oSmallSnorkelZombie = InheritO(oSnorkelZombie, {
         EName: "oSmallSnorkelZombie",
-        CName: "小潜水僵尸",
+        CName: "Small Snorkel Zombie",
         HP: 67,
         width: 71,
         height: 100,
@@ -2584,7 +2584,7 @@ var CZombies = (function (b, a) {
         };
         return InheritO(OrnNoneZombies, {
             EName: "oZomboni",
-            CName: "冰车僵尸",
+            CName: "Zomboni",
             HP: 1350,
             Lvl: 3,
             StandGif: 2,
@@ -2606,7 +2606,7 @@ var CZombies = (function (b, a) {
             AKind: 2,
             Attack: 50,
             Produce:
-                '冰车僵尸运用冰雪，碾过你的植物。<p>韧性：<font color="#FF0000">高</font><br>特点：<font color="#FF0000">碾压植物，留下条冰道</font></p>经常被误以为是在驾驶着冰车的僵尸，但事实上冰车僵尸是种完全不同的生物形式，他与太空兽人联系更紧密而不是僵尸。',
+                'The Zomboni applies ice, steam and pressure to your plants.<p>Toughness： <font color="#FF0000">high</font><br>Special： <font color="#FF0000">crushes plants, leaves an ice trail</font></p>The Zomboni is a totally different life-form more closely related to a space ogre than a zombie.',
             PicArr: (function () {
                 var b = "images/Zombies/Zomboni/";
                 return ["images/Card/Zombies/Zomboni.png", b + "0.gif", b + "1.gif", b + "2.gif", b + "3.gif", b + "4.gif", b + "5.gif" + $Random, b + "BoomDie.gif" + $Random, b + "ice.png", b + "ice_cap.png"];
@@ -2819,7 +2819,7 @@ var CZombies = (function (b, a) {
     })(),
     oDolphinRiderZombie = InheritO(oAquaticZombie, {
         EName: "oDolphinRiderZombie",
-        CName: "海豚骑士僵尸",
+        CName: "Dolphin Rider Zombie",
         HP: 500,
         Lvl: 2,
         BreakPoint: 167,
@@ -2865,7 +2865,7 @@ var CZombies = (function (b, a) {
         })(),
         AudioArr: ["dolphin_before_jumping", "dolphin_appears", "zombie_entering_water"],
         Produce:
-            '海豚骑士僵尸善于利用你水池防御的弱点。<p>韧性：<font color="#FF0000">中</font><br>速度：<font color="#FF0000">快，慢（跳越后）</font><br>特点：<font color="#FF0000">跃过他所遇到的第一株植物</font><br>只在水池关卡出现</font></p>那海豚其实也是个僵尸。',
+            'Dolphin Rider Zombies use dolphins to exploit weaknesses in your pool defense.<p>Toughness： <font color="#FF0000">medium</font><br>Speed： <font color="#FF0000">fast, then slow (after jump)</font><br>Special： <font color="#FF0000">jumps over the first plant he runs into</font><br>Only appears in the pool</font></p>The dolphin is also a zombie.',
         BirthCallBack: function (a) {
             PlayAudio("dolphin_appears");
             oAquaticZombie.prototype.BirthCallBack(a);
@@ -3018,7 +3018,7 @@ var CZombies = (function (b, a) {
     }),
     oImp = InheritO(OrnNoneZombies, {
         EName: "oImp",
-        CName: "小鬼僵尸",
+        CName: "Imp",
         HP: 70,
         BreakPoint: 23,
         beAttackedPointL: 30,
@@ -3041,7 +3041,7 @@ var CZombies = (function (b, a) {
         getShadow: function (a) {
             return "left:" + (a.beAttackedPointL - 20) + "px;top:" + (a.height - 32) + "px";
         },
-        Produce: '小淘气们是一群小型僵尸，他们被伽刚特尔用来投掷进你的防御体系。</p><p>韧性：<font color="#FF0000">低</font><br>小淘气虽然瘦小，却很结实。他精通僵尸柔道，僵尸空手道和僵尸关节技。另外，他还会吹口琴。',
+        Produce: 'Imps are tiny zombies hurled by Gargantuar deep into your defenses.</p><p>Toughness： <font color="#FF0000">low</font><br>Imp may be small, but he\'s wiry. He\'s proficient in zombie judo, zombie karate and zombie bare-knuckle brawling. He also plays the melodica.',
         GoingDie: function () {
             var b = this,
                 c = b.id,
@@ -3072,7 +3072,7 @@ var CZombies = (function (b, a) {
     }),
     oJackinTheBoxZombie = InheritO(OrnNoneZombies, {
         EName: "oJackinTheBoxZombie",
-        CName: "小丑僵尸",
+        CName: "Jack-in-the-Box Zombie",
         SunNum: 100,
         HP: 500,
         BreakPoint: 167,
@@ -3092,7 +3092,7 @@ var CZombies = (function (b, a) {
         OSpeed: 3.6,
         Speed: 3.6,
         Produce:
-            '这种僵尸带着个会爆炸的潘多拉盒子。</p><p>韧性：<font color="#FF0000">中</font><br>速度：<font color="#FF0000">快</font><br>特点：<font color="#FF0000">打开玩偶匣会爆炸</font><br>弱点：<font color="#FF0000">磁力菇</font><br>这种僵尸令人不寒而栗，不是因为他的冰冷身躯而是因为他的疯狂。',
+            'This zombie carries an explosive surprise.</p><p>Toughness： <font color="#FF0000">medium</font><br>Speed： <font color="#FF0000">fast</font><br>Special： <font color="#FF0000">jack-in-the-box explodes</font><br>Weakness： <font color="#FF0000">magnet-shroom</font><br>This zombie shivers, not because he\'s cold but because he\'s crazy.',
         AudioArr: ["jackinthebox", "jack_surprise", "explosion"],
         PicArr: (function () {
             var a = "images/Zombies/JackinTheBoxZombie/";
