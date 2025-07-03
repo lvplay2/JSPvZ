@@ -1,5 +1,7 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/Index.htm" }
+    { "source": "/", "destination": "/Index.html" },
+    { "source": "/eng", "destination": "eng/Index.html" },
+    { "source": "/chn", "destination": "chn/Index.html" }
   ]
 }
