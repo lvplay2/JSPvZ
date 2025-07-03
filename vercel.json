@@ -1,7 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "/Index.html" },
-    { "source": "/eng", "destination": "eng/Index.htm" },
-    { "source": "/chn", "destination": "chn/Index.htm" }
-  ]
-}
