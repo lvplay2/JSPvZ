@@ -38,7 +38,7 @@
 	</div>
 </div>
 
-<!--options ui-->
+<!--selector screen ui-->
 <div id="dSurface" class="WindowFrame">
 	<div id="iSurfaceBackground">
 		<map name="FPMap0">
@@ -140,15 +140,15 @@
 			<div id="dOptionsMenu">
 				<div class="OMd0">
 					<div class="OMd1">
-						<div><input type="checkbox" id="cAutoSun" value="1" onchange="CheckAutoSun(this)"> <label for="cAutoSun" id="lAutoSun">Auto-collect sun</label></div>
+						<div><input type="checkbox" id="cAutoSun" value="1" onchange="CheckAutoSun(this)"> <label for="cAutoSun" id="lAutoSun">Auto-Collect Sun</label></div>
 						<div><input type="checkbox" id="cSilence" value="1"> <label for="cSilence" id="lSilence">Mute</label></div>
 					</div>
 				</div>
-				<div class="BigLevel button" onclick="ShowLevel()">Select a level</div>
-				<div class="BigLevel button" onclick="ShowSpeed()">Game speed</div>
+				<div class="BigLevel button" onclick="ShowLevel()">Levels</div>
+				<div class="BigLevel button" onclick="ShowSpeed()">Speed</div>
 				<div class="BigLevel button" onclick="ViewHandBook()">Almanac</div>
 				<div class="BigLevel button" onclick="SelectModal(oS.Lvl)">Restart</div>
-				<div class="BigLevel button" onclick="SelectModal(0);HiddenOptions();SetBlock($('dSurface'),$('iSurfaceBackground'));ShowNameDiv();">Return to menu</div>
+				<div class="BigLevel button" onclick="SelectModal(0);HiddenOptions();SetBlock($('dSurface'),$('iSurfaceBackground'));ShowNameDiv();">Return to Main Menu</div>
 				<div class="OptionsMenuButton" style="margin-top:20px" onmousedown="OptionsMenuDown(this,$('sOptionsMenu'))" onmouseup="OptionsMenuUP(this,$('sOptionsMenu'));HiddenOptions();CheckAutoSun($('cAutoSun'));CheckSilence($('cSilence'))"><span id="sOptionsMenu" class="OptionsMenuButtonSpan">Continue</span></div>
 			</div>
 <script>
