@@ -2,16 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Select Language</title>
+    <title>JSPvZ: Select a Language</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 100px;
+            background-image: url('titlescreen.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         h1 {
             margin-bottom: 40px;
+            font-size: 48px;
+            text-shadow:
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
         }
 
         .button {
@@ -23,6 +41,11 @@
             border-radius: 8px;
             background-color: #007BFF;
             color: white;
+            text-shadow:
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
             transition: background-color 0.3s ease;
         }
 
