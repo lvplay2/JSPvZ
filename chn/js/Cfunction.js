@@ -340,10 +340,8 @@ var $User = (function () {
             $("imgFlagMeterFull").style.clip = "rect(0,auto,21px," + (b + 11) + "px)";
             if (c.AccessNum == c.PicNum) {
                 oS.Lvl == 0 && PlayAudio("groan2");
-                if (c.MustAllReady) {
-                    $("sFlagMeterTitleF").innerHTML = '<span style="cursor:pointer;font-family:Yahei Mono;color:#fff">图片载入完毕！(<span id="ADTimer" style="cursor:pointer;color:#005"></span>)</span>';
-                    c.LoadReady(c);
-                }
+                c.MustAllReady = false;
+                c.LoadReady(c);
             }
         },
         LoadReady: function (f) {
