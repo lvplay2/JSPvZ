@@ -12,6 +12,7 @@ oS.Init(
         LvlEName: 30,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
         StaticCard: 0,
+        StartGameMusic: "2.75",
         UserDefinedFlagFunc: function (a) {
             oP.FlagNum == oP.FlagZombies && oP.SetTimeoutWaterZombie(6, 9, 3, [oDuckyTubeZombie1]);
         },

@@ -10,7 +10,7 @@ oS.Init(
         LvlEName: 20,
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag1") },
         StaticCard: 0,
-        StartGameMusic: "Ultimate battle",
+        StartGameMusic: "2.75",
         StartGame: function () {
             StopMusic();
             PlayMusic((oS.LoadMusic = oS.StartGameMusic));
