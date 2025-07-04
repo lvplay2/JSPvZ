@@ -11,6 +11,7 @@ oS.Init(
         LvlEName: "NutBowling",
         LargeWaveFlag: { 10: $("imgFlag3"), 20: $("imgFlag2"), 30: $("imgFlag1") },
         StaticCard: 0,
+        StartGameMusic: "Watery Graves",
         StartGame: function () {
             NewEle(0, "div", "width:22px;height:502px;margin:75px 0 0 485px;position:absolute;z-index:1;background:url(images/interface/Stripe.png)", 0, $("tGround"));
             StopMusic();
